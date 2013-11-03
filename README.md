@@ -1,4 +1,4 @@
-# Cracking the Coding Interview
+# Cracking the Coding Interview, Fourth Edition
 
 Problems and solutions from from "Cracking the Coding Interview, Fourth Edition: 150 Programming Interview Questions and Solutions" by Gayle Laakmann.
 
