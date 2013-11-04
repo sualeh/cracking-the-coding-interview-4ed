@@ -16,11 +16,13 @@ import java.util.Arrays;
  * of the length of the string.
  */
 public class CStyleString
-  implements CharSequence,Serializable, Comparable<String>
+  implements CharSequence, Serializable, Comparable<CharSequence>
 {
 
   private static final long serialVersionUID = 3752079478974015220L;
-  
+
+  private static final char NULL_CHARACTER = '\0';
+
   private final StringBuilder buffer;
 
   public CStyleString()
@@ -62,7 +64,18 @@ public class CStyleString
   @Override
   public char charAt(final int index)
   {
-    return buffer.charAt(index);
+    if (index > buffer.length())
+    {
+      throw new IllegalAccessError("Access beyond the buffer boundary");
+    }
+    else if (index == buffer.length())
+    {
+      return NULL_CHARACTER;
+    }
+    else
+    {
+      return buffer.charAt(index);
+    }
   }
 
   /**
@@ -74,9 +87,9 @@ public class CStyleString
   }
 
   @Override
-  public int compareTo(final String o)
+  public int compareTo(final CharSequence o)
   {
-    return toString().compareTo(o);
+    return toString().compareTo(String.valueOf(o));
   }
 
   /**
@@ -86,6 +99,11 @@ public class CStyleString
   public boolean equals(final Object obj)
   {
     return buffer.toString().equals(String.valueOf(obj));
+  }
+
+  public char get(final int index)
+  {
+    return charAt(index);
   }
 
   /**
@@ -106,16 +124,21 @@ public class CStyleString
     return buffer.length();
   }
 
+  public void set(final int index, final char ch)
+  {
+    setCharAt(index, ch);
+  }
+
   /**
    * @see StringBuilder#setCharAt(int, char)
    */
   public void setCharAt(final int index, final char ch)
   {
-    if (index == buffer.length() && ch == 0)
+    if (index == buffer.length() && ch == NULL_CHARACTER)
     {
       return;
     }
-    else if (index < buffer.length() && ch == 0)
+    else if (index < buffer.length() && ch == NULL_CHARACTER)
     {
       buffer.setLength(index);
     }
@@ -123,7 +146,7 @@ public class CStyleString
     {
       // Calculate extension required
       int extensionLength = index + 1 - buffer.length();
-      if (ch == 0)
+      if (ch == NULL_CHARACTER)
       {
         extensionLength--;
       }
@@ -132,7 +155,7 @@ public class CStyleString
       Arrays.fill(extension, '~'); // junk data
       buffer.append(extension);
       // Set the character
-      if (ch != 0)
+      if (ch != NULL_CHARACTER)
       {
         buffer.setCharAt(index, ch);
       }
@@ -141,6 +164,29 @@ public class CStyleString
     {
       buffer.setCharAt(index, ch);
     }
+  }
+
+  public int size()
+  {
+    return length();
+  }
+
+  public void strcat(final CharSequence str)
+  {
+    if (str != null)
+    {
+      buffer.append(str);
+    }
+  }
+
+  public int strcmp(final CharSequence o)
+  {
+    return compareTo(o);
+  }
+
+  public int strlen()
+  {
+    return length();
   }
 
   @Override
@@ -154,7 +200,7 @@ public class CStyleString
    */
   public char[] toCharArray()
   {
-    return buffer.toString().toCharArray();
+    return Arrays.copyOf(buffer.toString().toCharArray(), length() + 1);
   }
 
   /**
