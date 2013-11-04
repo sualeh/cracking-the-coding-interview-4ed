@@ -12,7 +12,7 @@ import us.fatehi.sualeh.util.CStyleString;
  * or two additional variables are fine. An extra copy of the array is
  * not. FOLLOW UP Write the test cases for this method.
  */
-public class Question1_3
+public class Question01_3
 {
 
   // First, ask yourself, what does the interviewer mean by an

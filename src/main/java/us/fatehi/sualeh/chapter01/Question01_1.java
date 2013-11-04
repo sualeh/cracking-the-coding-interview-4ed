@@ -7,7 +7,7 @@ import java.util.Set;
  * 1.1 Implement an algorithm to determine if a string has all unique
  * characters. What if you can not use additional data structures?
  */
-public class Question1_1 {
+public class Question01_1 {
 
 	// We can reduce our space usage a little bit by using a bit vector. We will
 	// assume, in the below code, that the string is only lower case ‘a’ through

@@ -2,14 +2,14 @@ package us.fatehi.sualeh.chapter01;
 
 
 import static org.junit.Assert.assertEquals;
-import static us.fatehi.sualeh.chapter01.Question1_2.*;
+import static us.fatehi.sualeh.chapter01.Question01_2.*;
 
 import org.junit.Before;
 import org.junit.Test;
 
 import us.fatehi.sualeh.util.CStyleString;
 
-public class TestQuestion1_2
+public class TestQuestion01_2
 {
 
   CStyleString[] words;
