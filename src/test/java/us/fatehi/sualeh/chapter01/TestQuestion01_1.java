@@ -1,13 +1,13 @@
 package us.fatehi.sualeh.chapter01;
 
 import static org.junit.Assert.assertEquals;
-import static us.fatehi.sualeh.chapter01.Question1_1.isUniqueChars;
-import static us.fatehi.sualeh.chapter01.Question1_1.isUniqueChars2;
-import static us.fatehi.sualeh.chapter01.Question1_1.isUniqueCharsUnicode;
+import static us.fatehi.sualeh.chapter01.Question01_1.isUniqueChars;
+import static us.fatehi.sualeh.chapter01.Question01_1.isUniqueChars2;
+import static us.fatehi.sualeh.chapter01.Question01_1.isUniqueCharsUnicode;
 
 import org.junit.Test;
 
-public class TestQuestion1_1 {
+public class TestQuestion01_1 {
 
 	@Test
 	public void test1Question1_1() {

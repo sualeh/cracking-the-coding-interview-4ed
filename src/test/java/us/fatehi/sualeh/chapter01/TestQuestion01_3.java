@@ -2,15 +2,15 @@ package us.fatehi.sualeh.chapter01;
 
 
 import static org.junit.Assert.assertEquals;
-import static us.fatehi.sualeh.chapter01.Question1_3.removeDuplicates;
-import static us.fatehi.sualeh.chapter01.Question1_3.removeDuplicatesEff;
+import static us.fatehi.sualeh.chapter01.Question01_3.removeDuplicates;
+import static us.fatehi.sualeh.chapter01.Question01_3.removeDuplicatesEff;
 
 import org.junit.Before;
 import org.junit.Test;
 
 import us.fatehi.sualeh.util.CStyleString;
 
-public class TestQuestion1_3
+public class TestQuestion01_3
 {
 
   CStyleString[] words;

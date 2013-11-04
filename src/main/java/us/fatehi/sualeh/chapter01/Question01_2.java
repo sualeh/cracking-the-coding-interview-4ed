@@ -8,7 +8,7 @@ import us.fatehi.sualeh.util.CStyleString;
  * “abcd” is represented as five characters, including the null
  * character.)
  */
-public class Question1_2
+public class Question01_2
 {
 
   // This is a classic interview question. The only “gotcha” is to try
