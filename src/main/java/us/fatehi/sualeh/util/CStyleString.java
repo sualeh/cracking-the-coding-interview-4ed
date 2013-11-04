@@ -7,6 +7,7 @@
 package us.fatehi.sualeh.util;
 
 
+import java.io.Serializable;
 import java.util.Arrays;
 
 /**
@@ -15,8 +16,11 @@ import java.util.Arrays;
  * of the length of the string.
  */
 public class CStyleString
+  implements CharSequence,Serializable, Comparable<String>
 {
 
+  private static final long serialVersionUID = 3752079478974015220L;
+  
   private final StringBuilder buffer;
 
   public CStyleString()
@@ -55,6 +59,7 @@ public class CStyleString
   /**
    * @see StringBuilder#charAt(int)
    */
+  @Override
   public char charAt(final int index)
   {
     return buffer.charAt(index);
@@ -66,6 +71,12 @@ public class CStyleString
   public int codePointAt(final int index)
   {
     return buffer.codePointAt(index);
+  }
+
+  @Override
+  public int compareTo(final String o)
+  {
+    return toString().compareTo(o);
   }
 
   /**
@@ -89,6 +100,7 @@ public class CStyleString
   /**
    * @see StringBuilder#length()
    */
+  @Override
   public int length()
   {
     return buffer.length();
@@ -129,6 +141,12 @@ public class CStyleString
     {
       buffer.setCharAt(index, ch);
     }
+  }
+
+  @Override
+  public CharSequence subSequence(final int start, final int end)
+  {
+    return buffer.subSequence(start, end);
   }
 
   /**
