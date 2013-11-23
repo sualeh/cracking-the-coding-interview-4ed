@@ -3,9 +3,9 @@ package us.fatehi.sualeh.chapter01;
 
 import static org.junit.Assert.assertTrue;
 import static us.fatehi.sualeh.chapter01.Question01_6.rotate;
+import static us.fatehi.sualeh.testutil.TestUtil.readIntArray;
 
 import java.util.Arrays;
-import java.util.Scanner;
 
 import org.junit.Test;
 
@@ -52,26 +52,6 @@ public class TestQuestion01_6
                              Arrays.deepToString(x4x4),
                              Arrays.deepToString(_4x4)),
                Arrays.deepEquals(_4x4, x4x4));
-  }
-
-  private int[][] readIntArray(final String[] inputLines)
-  {
-
-    final int[][] twoDim = new int[inputLines.length][inputLines.length];
-
-    for (int row = 0; row < inputLines.length; row++)
-    {
-      final String line = inputLines[row];
-      final Scanner s = new Scanner(line);
-      for (int col = 0; col < inputLines.length; col++)
-      {
-        if (s.hasNextInt())
-        {
-          twoDim[row][col] = s.nextInt();
-        }
-      }
-    }
-    return twoDim;
   }
 
 }
