@@ -1,8 +1,8 @@
 package us.fatehi.sualeh.chapter02;
 
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.HashSet;
+import java.util.Set;
 
 import us.fatehi.sualeh.util.LinkedListNode;
 
@@ -15,20 +15,20 @@ public class Question02_1
 {
 
   // If we can use a buffer, we can keep track of elements in a
-  // hashtable and remove any dupes
+  // set and remove any dupes
   public static void deleteDups(LinkedListNode n)
   {
-    final Map<Integer, Boolean> table = new HashMap<>();
+    final Set<Integer> set = new HashSet<>();
     LinkedListNode previous = null;
     while (n != null)
     {
-      if (table.containsKey(n.data))
+      if (set.contains(n.data))
       {
         previous.next = n.next;
       }
       else
       {
-        table.put(n.data, true);
+        set.add(n.data);
         previous = n;
       }
       n = n.next;
@@ -37,7 +37,7 @@ public class Question02_1
 
   // Without a buffer, we can iterate with two pointers: “current” does
   // a normal iteration, while “runner” iterates through all prior nodes
-  // to check for dups. Runner will only see one dup per node, because
+  // to check for dupes. Runner will only see one dupe per node, because
   // if there were multiple duplicates they would have been removed
   // already.
   public static void deleteDups2(final LinkedListNode head)
@@ -53,13 +53,13 @@ public class Question02_1
       LinkedListNode runner = head;
       while (runner != current)
       { 
-        // Check for earlier dupes
+        // check for earlier dupes
         if (runner.data == current.data)
         {
           final LinkedListNode tmp = current.next; // remove current
           previous.next = tmp;
           current = tmp; // update current to next node
-          break; // all other dups have already been removed
+          break; // all other dupes have already been removed
         }
         runner = runner.next;
       }
