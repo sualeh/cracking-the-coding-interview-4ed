@@ -25,7 +25,6 @@ public class TestQuestion01_6
     // Test odd-size
     final int[][] _3x3 = readIntArray(_3x3s);
     final int[][] x3x3 = readIntArray(x3x3s);
-    System.out.println(Arrays.deepToString(_3x3));
     rotate(_3x3, 3);
     assertTrue(String.format("expected:\n%s\nactual:\n%s",
                              Arrays.deepToString(x3x3),
@@ -46,7 +45,6 @@ public class TestQuestion01_6
     // Test even-size
     final int[][] _4x4 = readIntArray(_4x4s);
     final int[][] x4x4 = readIntArray(x4x4s);
-    System.out.println(Arrays.deepToString(_4x4));
     rotate(_4x4, 4);
     assertTrue(String.format("expected:\n%s\nactual:\n%s",
                              Arrays.deepToString(x4x4),
