@@ -24,7 +24,6 @@ public class TestQuestion01_7
 
     final int[][] _3x3 = readIntArray(_3x3s);
     final int[][] x3x3 = readIntArray(x3x3s);
-    System.out.println(Arrays.deepToString(_3x3));
     setZeros(_3x3);
     assertTrue(String.format("expected:\n%s\nactual:\n%s",
                              Arrays.deepToString(x3x3),
