@@ -22,6 +22,7 @@ public class CStyleString
   private static final long serialVersionUID = 3752079478974015220L;
 
   private static final char NULL_CHARACTER = '\0';
+  private static final char JUNK_CHARACTER = '\u2610';
 
   private final StringBuilder buffer;
 
@@ -152,7 +153,7 @@ public class CStyleString
       }
       // Extend with junk characters
       final char[] extension = new char[extensionLength];
-      Arrays.fill(extension, '~'); // junk data
+      Arrays.fill(extension, JUNK_CHARACTER);
       buffer.append(extension);
       // Set the character
       if (ch != NULL_CHARACTER)
