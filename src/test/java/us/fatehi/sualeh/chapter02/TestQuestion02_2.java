@@ -13,7 +13,7 @@ public class TestQuestion02_2
 {
 
   @Test
-  public void test1Question02_1()
+  public void test1Question02_2()
   {
     final LinkedListNode linkedList1 = linkedList(1, 2, 3, 1, 4, 5, 1);
     
