@@ -12,6 +12,7 @@ public class LinkedListNode
     data = d;
   }
 
+  @Override
   public String toString()
   {
     return String.format("[%d] -> %s",
