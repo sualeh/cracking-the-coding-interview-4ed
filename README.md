@@ -1,7 +1,9 @@
-# Cracking the Coding Interview, Fourth Edition
+**Java Solutions to Problems from Cracking the Coding Interview, Fourth Edition**
 
-Problems and solutions from "Cracking the Coding Interview, Fourth Edition: 150 Programming Interview Questions and Solutions" by [Gayle Laakmann McDowell](http://www.technologywoman.com/books/).
+Problems and solutions from [_Cracking the Coding Interview, Fourth Edition: 150 Programming Interview Questions and Solutions_][book] by [Gayle Laakmann McDowell][gayle]. The questions are solved in Java 7, with JUnit tests. This a Maven project, and can be opened in Eclipse, with the m2e plugin installed.
 
-The questions are solved in Java, with JUnit tests. This a Maven project, and can be opened in Eclipse. Java 7 is required.
+> Includes a Java class called [`CStyleString`][CStyleString], which allows some of the C string algorithms to be solved in Java.
 
-* There is a Java class called CStyleString, which allows some of the C string algorithms to be solved in Java.
+[book]: http://www.amazon.com/Cracking-Coding-Interview-Fourth-Edition/dp/145157827X
+[gayle]: http://www.technologywoman.com
+[CStyleString]: https://github.com/sualeh/cracking-the-coding-interview-4ed/blob/master/src/main/java/us/fatehi/sualeh/util/CStyleString.java
