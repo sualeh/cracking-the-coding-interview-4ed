@@ -14,7 +14,7 @@ public class TestQuestion03_1
 {
 
   @Test
-  public void test1Question02_5()
+  public void test1Question03_1()
   {
     final ArrayStack stack = new ArrayStack();
 
