@@ -11,7 +11,7 @@ public class TestQuestion03_5
 {
 
   @Test
-  public void test1Question03_2()
+  public void test1Question03_5()
   {
 
     final MyQueue<Integer> queue = new MyQueue<>();
