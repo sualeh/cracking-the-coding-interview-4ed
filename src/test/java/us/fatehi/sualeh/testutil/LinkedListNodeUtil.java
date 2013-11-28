@@ -9,20 +9,20 @@ import us.fatehi.sualeh.util.LinkedListNode;
 public class LinkedListNodeUtil
 {
 
-  public static LinkedListNode linkedList(final int... list)
+  public static LinkedListNode linkedList(final int... items)
   {
-    if (list == null || list.length == 0)
+    if (items == null || items.length == 0)
     {
       return null;
     }
 
-    final LinkedListNode head = new LinkedListNode(list[0]);
+    final LinkedListNode head = new LinkedListNode(items[0]);
     LinkedListNode prev = head;
-    if (list.length > 1)
+    if (items.length > 1)
     {
-      for (int i = 1; i < list.length; i++)
+      for (int i = 1; i < items.length; i++)
       {
-        final LinkedListNode next = new LinkedListNode(list[i]);
+        final LinkedListNode next = new LinkedListNode(items[i]);
         prev.next = next;
         prev = next;
       }
