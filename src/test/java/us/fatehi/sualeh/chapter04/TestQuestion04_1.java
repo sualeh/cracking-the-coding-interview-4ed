@@ -7,6 +7,7 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 
 import us.fatehi.sualeh.util.TreeNode;
+import us.fatehi.sualeh.util.TreeNodePrinter;
 
 public class TestQuestion04_1
 {
@@ -17,10 +18,12 @@ public class TestQuestion04_1
 
     final TreeNode balancedRoot = new TreeNode();
     makeBalancedTree(balancedRoot, 4);
+    TreeNodePrinter.print(balancedRoot);
 
     final TreeNode unbalancedRoot = new TreeNode();
     makeUnbalancedTree(unbalancedRoot, 4);
-
+    TreeNodePrinter.print(unbalancedRoot);
+    
     assertTrue(Question04_1.isBalanced(balancedRoot));
     assertEquals(4, Question04_1.maxDepth(balancedRoot));
     assertEquals(4, Question04_1.minDepth(balancedRoot));
