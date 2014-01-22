@@ -11,6 +11,12 @@ import us.fatehi.sualeh.util.TreeNode;
  */
 public class Question04_1
 {
+  /*
+   * The idea is very simple: the difference of min depth and max depth
+   * should not exceed 1, since the difference of the min and the max
+   * depth is the maximum distance difference possible in the tree.
+   */
+
   public static boolean isBalanced(final TreeNode root)
   {
     return maxDepth(root) - minDepth(root) <= 1;
