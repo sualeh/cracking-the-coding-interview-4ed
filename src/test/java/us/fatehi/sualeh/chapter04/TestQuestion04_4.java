@@ -2,29 +2,35 @@ package us.fatehi.sualeh.chapter04;
 
 
 import static org.junit.Assert.assertEquals;
+import static us.fatehi.sualeh.chapter04.Question04_4.findLevelLinkList;
+import static us.fatehi.sualeh.util.TreeNodePrinter.print;
 
 import java.util.LinkedList;
 import java.util.List;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import us.fatehi.sualeh.util.TreeNode;
-import us.fatehi.sualeh.util.TreeNodePrinter;
 
 public class TestQuestion04_4
 {
+
+  private TreeNode root;
+
+  @Before
+  public void setup()
+  {
+    root = new TreeNode(0);
+    makeUnbalancedTree(root, 5, 0);
+    print(root);
+  }
 
   @Test
   public void test1Question04_4()
   {
 
-    final TreeNode root = new TreeNode(0);
-    makeUnbalancedTree(root, 5, 0);
-    TreeNodePrinter.print(root);
-
-    final List<LinkedList<TreeNode>> levelLinkList = Question04_4
-      .findLevelLinkList(root);
-    System.out.println(levelLinkList);
+    final List<LinkedList<TreeNode>> levelLinkList = findLevelLinkList(root);
     assertEquals(levelLinkList.toString(), "[[0], [1], [2, 3], [4], [5, 6]]");
 
   }

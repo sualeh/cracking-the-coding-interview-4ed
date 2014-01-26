@@ -2,22 +2,17 @@ package us.fatehi.sualeh.chapter04;
 
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
-import static us.fatehi.sualeh.chapter04.Question04_5.inorderSucc;
+import static us.fatehi.sualeh.chapter04.Question04_6_2.commonAncestor;
 import static us.fatehi.sualeh.util.TreeNodePrinter.print;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import org.junit.Before;
 import org.junit.Test;
 
 import us.fatehi.sualeh.util.TreeNode;
 
-public class TestQuestion04_5
+public class TestQuestion04_6
 {
 
-  private List<Integer> inorderNodes;
   private TreeNode[] nodes;
 
   @Before
@@ -26,44 +21,14 @@ public class TestQuestion04_5
     nodes = makeUnbalancedTree();
     final TreeNode root = nodes[0];
     print(root);
-
-    inorderNodes = new ArrayList<>();
-    inOrder(inorderNodes, root);
-    System.out.println("in-order traversal: " + inorderNodes);
   }
 
   @Test
-  public void test1Question04_5()
+  public void test1Question04_6_2()
   {
-
-    for (final TreeNode node: nodes)
-    {
-      final TreeNode inorderSucc = inorderSucc(node);
-      final int indexSucc = inorderNodes.lastIndexOf(node.value()) + 1;
-      if (indexSucc < inorderNodes.size())
-      {
-        assertEquals(inorderNodes.get(indexSucc).intValue(),
-                     inorderSucc.value());
-      }
-      else
-      {
-        assertNull(inorderSucc);
-      }
-    }
-  }
-
-  private void inOrder(final List<Integer> list, final TreeNode root)
-  {
-    if (root == null)
-    {
-      return;
-    }
-
-    inOrder(list, root.left());
-
-    list.add(root.value());
-
-    inOrder(list, root.right());
+    assertEquals(nodes[6], commonAncestor(nodes[0], nodes[8], nodes[5]));
+    assertEquals(nodes[7], commonAncestor(nodes[0], nodes[8], nodes[2]));
+    assertEquals(nodes[0], commonAncestor(nodes[0], nodes[8], nodes[4]));
   }
 
   private TreeNode[] makeUnbalancedTree()

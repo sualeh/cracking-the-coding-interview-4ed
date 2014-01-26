@@ -3,13 +3,14 @@ package us.fatehi.sualeh.chapter04;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-
-import java.util.Arrays;
+import static us.fatehi.sualeh.chapter04.Question04_1.isBalanced;
+import static us.fatehi.sualeh.chapter04.Question04_1.maxDepth;
+import static us.fatehi.sualeh.chapter04.Question04_3.createMinimalBST;
+import static us.fatehi.sualeh.util.TreeNodePrinter.print;
 
 import org.junit.Test;
 
 import us.fatehi.sualeh.util.TreeNode;
-import us.fatehi.sualeh.util.TreeNodePrinter;
 
 public class TestQuestion04_3
 {
@@ -21,13 +22,12 @@ public class TestQuestion04_3
     final int[] arr = {
         1, 2, 3, 4, 5, 10, 15, 20, 25, 30, 50, 100,
     };
-    Arrays.sort(arr);
 
-    final TreeNode minimalBST = Question04_3.createMinimalBST(arr);
-    TreeNodePrinter.print(minimalBST);
+    final TreeNode minimalBST = createMinimalBST(arr);
+    print(minimalBST);
 
-    assertTrue(Question04_1.isBalanced(minimalBST));
-    assertEquals(4, Question04_1.maxDepth(minimalBST));
+    assertTrue(isBalanced(minimalBST));
+    assertEquals(4, maxDepth(minimalBST));
 
   }
 

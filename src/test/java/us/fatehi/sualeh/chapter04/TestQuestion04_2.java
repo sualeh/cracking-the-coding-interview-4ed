@@ -2,7 +2,9 @@ package us.fatehi.sualeh.chapter04;
 
 
 import static org.junit.Assert.assertTrue;
+import static us.fatehi.sualeh.chapter04.Question04_2.search;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import us.fatehi.sualeh.util.Graph;
@@ -11,19 +13,19 @@ import us.fatehi.sualeh.util.Graph.Node;
 public class TestQuestion04_2
 {
 
+  private Graph graph;
+
+  @Before
+  public void setup()
+  {
+    graph = makeGraph();
+  }
+
   @Test
   public void test1Question04_2()
   {
-
-    final Graph graph = makeGraph();
-
-    assertTrue(Question04_2.search(graph,
-                                   graph.getNode("7"),
-                                   graph.getNode("9")));
-    assertTrue(!Question04_2.search(graph,
-                                    graph.getNode("7"),
-                                    graph.getNode("5")));
-
+    assertTrue(search(graph, graph.getNode("7"), graph.getNode("9")));
+    assertTrue(!search(graph, graph.getNode("7"), graph.getNode("5")));
   }
 
   private Graph makeGraph()
