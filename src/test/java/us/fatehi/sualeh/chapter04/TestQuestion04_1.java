@@ -3,7 +3,11 @@ package us.fatehi.sualeh.chapter04;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
+import static us.fatehi.sualeh.chapter04.Question04_1.isBalanced;
+import static us.fatehi.sualeh.chapter04.Question04_1.maxDepth;
+import static us.fatehi.sualeh.chapter04.Question04_1.minDepth;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import us.fatehi.sualeh.util.TreeNode;
@@ -12,25 +16,32 @@ import us.fatehi.sualeh.util.TreeNodePrinter;
 public class TestQuestion04_1
 {
 
+  private TreeNode balancedRoot;
+  private TreeNode unbalancedRoot;
+
+  @Before
+  public void setup()
+  {
+    balancedRoot = new TreeNode();
+    makeBalancedTree(balancedRoot, 4);
+    TreeNodePrinter.print(balancedRoot);
+
+    unbalancedRoot = new TreeNode();
+    makeUnbalancedTree(unbalancedRoot, 4);
+    TreeNodePrinter.print(unbalancedRoot);
+  }
+
   @Test
   public void test1Question04_1()
   {
 
-    final TreeNode balancedRoot = new TreeNode();
-    makeBalancedTree(balancedRoot, 4);
-    TreeNodePrinter.print(balancedRoot);
+    assertTrue(isBalanced(balancedRoot));
+    assertEquals(4, maxDepth(balancedRoot));
+    assertEquals(4, minDepth(balancedRoot));
 
-    final TreeNode unbalancedRoot = new TreeNode();
-    makeUnbalancedTree(unbalancedRoot, 4);
-    TreeNodePrinter.print(unbalancedRoot);
-
-    assertTrue(Question04_1.isBalanced(balancedRoot));
-    assertEquals(4, Question04_1.maxDepth(balancedRoot));
-    assertEquals(4, Question04_1.minDepth(balancedRoot));
-
-    assertTrue(!Question04_1.isBalanced(unbalancedRoot));
-    assertEquals(4, Question04_1.maxDepth(unbalancedRoot));
-    assertEquals(2, Question04_1.minDepth(unbalancedRoot));
+    assertTrue(!isBalanced(unbalancedRoot));
+    assertEquals(4, maxDepth(unbalancedRoot));
+    assertEquals(2, minDepth(unbalancedRoot));
 
   }
 
