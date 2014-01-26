@@ -9,7 +9,7 @@ import java.util.Stack;
  */
 public class Question03_5
 {
-  
+
   /*
    * Since the major difference between a queue and a stack is the order
    * (first-in-first-out vs. last-in-first-out), we know that we need to
@@ -47,7 +47,7 @@ public class Question03_5
       {
         return s2.peek();
       }
-      
+
       while (!s1.empty())
       {
         s2.push(s1.pop());

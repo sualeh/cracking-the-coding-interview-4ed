@@ -52,7 +52,7 @@ public class Question02_1
     {
       LinkedListNode runner = head;
       while (runner != current)
-      { 
+      {
         // check for earlier dupes
         if (runner.data == current.data)
         {
@@ -64,7 +64,7 @@ public class Question02_1
         runner = runner.next;
       }
       if (runner == current)
-      { 
+      {
         // current not updated - update now
         previous = current;
         current = current.next;

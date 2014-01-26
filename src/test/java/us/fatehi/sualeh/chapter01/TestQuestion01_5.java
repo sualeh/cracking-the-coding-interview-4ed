@@ -2,7 +2,7 @@ package us.fatehi.sualeh.chapter01;
 
 
 import static org.junit.Assert.assertEquals;
-import static us.fatehi.sualeh.chapter01.Question01_5.*;
+import static us.fatehi.sualeh.chapter01.Question01_5.replaceSpaces;
 
 import org.junit.Before;
 import org.junit.Test;

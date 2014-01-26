@@ -26,11 +26,11 @@ public class Question02_3
     {
       return false; // Failure
     }
-    
+
     final LinkedListNode next = n.next;
     n.data = next.data;
     n.next = next.next;
-    
+
     return true;
   }
 

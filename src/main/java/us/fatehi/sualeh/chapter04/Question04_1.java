@@ -28,7 +28,7 @@ public class Question04_1
     {
       return 0;
     }
-    return 1 + Math.max(maxDepth(root.left), maxDepth(root.right));
+    return 1 + Math.max(maxDepth(root.left()), maxDepth(root.right()));
   }
 
   public static int minDepth(final TreeNode root)
@@ -37,7 +37,7 @@ public class Question04_1
     {
       return 0;
     }
-    return 1 + Math.min(minDepth(root.left), minDepth(root.right));
+    return 1 + Math.min(minDepth(root.left()), minDepth(root.right()));
   }
 
 }

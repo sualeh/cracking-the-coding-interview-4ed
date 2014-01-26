@@ -29,14 +29,14 @@ public class TestQuestion02_4
 
     assertEquals(Arrays.asList(8, 0, 8), toList(result));
   }
-  
+
   @Test
   public void test2Question02_4()
   {
     final LinkedListNode num1 = linkedList(3, 1, 5, 7);
     final LinkedListNode num2 = linkedList(5, 9, 2);
 
-    LinkedListNode result = addLists(num1, num2, false);
+    final LinkedListNode result = addLists(num1, num2, false);
 
     assertEquals(Arrays.asList(8, 0, 8, 7), toList(result));
   }
@@ -46,9 +46,9 @@ public class TestQuestion02_4
   {
     final LinkedListNode num1 = linkedList(3, 1, 5, 7);
 
-    LinkedListNode result = addLists(num1, null, false);
+    final LinkedListNode result = addLists(num1, null, false);
 
     assertEquals(Arrays.asList(3, 1, 5, 7), toList(result));
   }
-  
+
 }

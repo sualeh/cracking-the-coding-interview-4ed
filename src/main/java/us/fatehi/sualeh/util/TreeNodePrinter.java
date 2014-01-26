@@ -1,17 +1,21 @@
 package us.fatehi.sualeh.util;
 
+
 /**
- * http://stackoverflow.com/questions/4965335/how-to-print-binary-tree-diagram
+ * http://stackoverflow.com/questions/4965335/how-to-print-binary-tree-
+ * diagram
  */
 public class TreeNodePrinter
 {
 
-  public static void print(TreeNode node)
+  public static void print(final TreeNode node)
   {
     print(node, "", true);
   }
 
-  private static void print(TreeNode node, String prefix, boolean isTail)
+  private static void print(final TreeNode node,
+                            final String prefix,
+                            final boolean isTail)
   {
     if (node == null)
     {
@@ -20,8 +24,8 @@ public class TreeNodePrinter
     else
     {
       System.out.println(prefix + (isTail? "└── ": "├── ") + node.toString());
-      print(node.left, prefix + (isTail? "    ": "│   "), false);
-      print(node.right, prefix + (isTail? "    ": "│   "), true);
+      print(node.left(), prefix + (isTail? "    ": "│   "), false);
+      print(node.right(), prefix + (isTail? "    ": "│   "), true);
     }
   }
 

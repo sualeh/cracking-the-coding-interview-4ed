@@ -21,11 +21,11 @@ public class Question04_2
    * found. We should mark any node found in the course of the algorithm
    * as ‘already visited’ to avoid cycles and repetition of the nodes.
    */
-  
-  public static boolean search(Graph g, Node start, Node end)
+
+  public static boolean search(final Graph g, final Node start, final Node end)
   {
-    Stack<Node> q = new Stack<Node>();
-    for (Node u: g.getNodes())
+    final Stack<Node> q = new Stack<Node>();
+    for (final Node u: g.getNodes())
     {
       u.state = State.Unvisited;
     }
@@ -37,7 +37,7 @@ public class Question04_2
       u = q.pop();
       if (u != null)
       {
-        for (Node v: u.getAdjacent())
+        for (final Node v: u.getAdjacent())
         {
           if (v.state == State.Unvisited)
           {

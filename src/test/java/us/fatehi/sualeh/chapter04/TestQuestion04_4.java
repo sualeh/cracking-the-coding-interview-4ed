@@ -15,7 +15,7 @@ public class TestQuestion04_4
 {
 
   @Test
-  public void test1Question04_3()
+  public void test1Question04_4()
   {
 
     final TreeNode root = new TreeNode(0);
@@ -44,13 +44,13 @@ public class TestQuestion04_4
 
     value++;
     nodeL = new TreeNode(value);
-    node.left = nodeL;
+    node.addLeft(nodeL);
 
     if (maxDepth % 2 == 0)
     {
       value++;
       nodeR = new TreeNode(value);
-      node.right = nodeR;
+      node.addRight(nodeR);
     }
 
     makeUnbalancedTree(nodeL, maxDepth - 1, value);
