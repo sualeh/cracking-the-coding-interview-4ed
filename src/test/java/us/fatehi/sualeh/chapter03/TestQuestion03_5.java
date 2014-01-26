@@ -50,7 +50,6 @@ public class TestQuestion03_5
     assertEquals(3, remove);
     assertEquals(4, (int) queue.peek());
 
-    
   }
 
 }

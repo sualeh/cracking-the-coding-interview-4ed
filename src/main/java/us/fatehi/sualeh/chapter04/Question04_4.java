@@ -20,8 +20,8 @@ public class Question04_4
    * slight modification of the breath-first traversal of the tree. In a
    * usual breath first search traversal, we simply traverse the nodes
    * without caring which level we are on. In this case, it is critical
-   * to know the level. We thus use a dummy node to indicate when we
-   * have finished one level and are starting on the next.
+   * to know the level. We use the list for a level to find children on
+   * the next level, to build the next list.
    */
   public static List<LinkedList<TreeNode>> findLevelLinkList(final TreeNode root)
   {
@@ -33,30 +33,29 @@ public class Question04_4
     while (true)
     {
       list = new LinkedList<>();
-      for (int i = 0; i < result.get(level).size(); i++)
+      for (final TreeNode n: result.get(level))
       {
-        final TreeNode n = result.get(level).get(i);
         if (n != null)
         {
-          if (n.left != null)
+          if (n.left() != null)
           {
-            list.add(n.left);
+            list.add(n.left());
           }
-          if (n.right != null)
+          if (n.right() != null)
           {
-            list.add(n.right);
+            list.add(n.right());
           }
         }
       }
       if (list.size() > 0)
       {
-        result.add(level + 1, list);
+        level = level + 1;
+        result.add(level, list);
       }
       else
       {
         break;
       }
-      level++;
     }
     return result;
   }

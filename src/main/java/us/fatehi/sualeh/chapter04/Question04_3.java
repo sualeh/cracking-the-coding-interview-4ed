@@ -32,13 +32,13 @@ public class Question04_3
     {
       return null;
     }
-    
+
     final int mid = (start + end) / 2;
     final TreeNode n = new TreeNode(arr[mid]);
-    
-    n.left = addToTree(arr, start, mid - 1);
-    n.right = addToTree(arr, mid + 1, end);
-    
+
+    n.addLeft(addToTree(arr, start, mid - 1));
+    n.addRight(addToTree(arr, mid + 1, end));
+
     return n;
   }
 

@@ -46,7 +46,7 @@ public class LinkedListNodeUtil
     }
     // Last one
     list.add(n.data);
-    
+
     return list;
   }
 

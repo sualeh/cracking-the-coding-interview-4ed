@@ -27,7 +27,7 @@ public class TestQuestion02_3
       nodeToDelete = nodeToDelete.next;
     }
 
-    boolean deleted = deleteNode(nodeToDelete);
+    final boolean deleted = deleteNode(nodeToDelete);
 
     assertTrue(deleted);
     assertEquals(Arrays.asList(1, 2, 3, 1, 4, 1), toList(linkedList));
@@ -44,7 +44,7 @@ public class TestQuestion02_3
       nodeToDelete = nodeToDelete.next;
     }
 
-    boolean deleted = deleteNode(nodeToDelete);
+    final boolean deleted = deleteNode(nodeToDelete);
 
     assertTrue(!deleted);
     assertEquals(Arrays.asList(1, 2, 3, 1, 4, 5, 1), toList(linkedList));

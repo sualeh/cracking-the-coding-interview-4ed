@@ -1,7 +1,7 @@
 package us.fatehi.sualeh.chapter03;
 
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
@@ -20,22 +20,22 @@ public class TestQuestion03_2
     stack.push(1);
     stack.push(2);
     stack.push(1);
-    
+
     assertEquals(1, stack.peek().value);
     assertEquals(1, stack.min());
-    
+
     stack.pop();
-    
+
     assertEquals(2, stack.peek().value);
     assertEquals(1, stack.min());
-    
+
     stack.pop();
-    
+
     assertEquals(1, stack.peek().value);
     assertEquals(1, stack.min());
-    
+
     stack.pop();
-    
+
     assertEquals(3, stack.peek().value);
     assertEquals(2, stack.min());
   }

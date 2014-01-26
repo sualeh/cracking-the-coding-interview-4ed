@@ -26,9 +26,9 @@ public class TestQuestion03_1
     assertTrue(printStack(stack), !stack.isEmpty(1));
     assertTrue(printStack(stack), stack.isEmpty(2));
 
-    int peek0 = stack.peek(0);
-    int peek1 = stack.peek(1);
-    int peek2 = stack.peek(2);
+    final int peek0 = stack.peek(0);
+    final int peek1 = stack.peek(1);
+    final int peek2 = stack.peek(2);
     System.out.println(printStack(stack));
 
     assertEquals(printStack(stack), 1, peek0);
@@ -36,7 +36,7 @@ public class TestQuestion03_1
     assertEquals(printStack(stack), 0, peek2);
 
     stack.push(0, 3);
-    int pop2 = stack.pop(1);
+    final int pop2 = stack.pop(1);
     System.out.println(printStack(stack));
 
     assertEquals(printStack(stack), 2, pop2);
@@ -48,7 +48,7 @@ public class TestQuestion03_1
 
   private String printStack(final ArrayStack stack)
   {
-    char[] pointer = new char[stack.stackSize * 3];
+    final char[] pointer = new char[stack.stackSize * 3];
     Arrays.fill(pointer, ' ');
     for (int i = 0; i < 3; i++)
     {

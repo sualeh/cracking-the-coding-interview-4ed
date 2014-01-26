@@ -23,7 +23,7 @@ public class TestQuestion04_1
     final TreeNode unbalancedRoot = new TreeNode();
     makeUnbalancedTree(unbalancedRoot, 4);
     TreeNodePrinter.print(unbalancedRoot);
-    
+
     assertTrue(Question04_1.isBalanced(balancedRoot));
     assertEquals(4, Question04_1.maxDepth(balancedRoot));
     assertEquals(4, Question04_1.minDepth(balancedRoot));
@@ -45,8 +45,8 @@ public class TestQuestion04_1
 
     nodeL = new TreeNode();
     nodeR = new TreeNode();
-    node.left = nodeL;
-    node.right = nodeR;
+    node.addLeft(nodeL);
+    node.addRight(nodeR);
 
     makeBalancedTree(nodeL, maxDepth - 1);
     makeBalancedTree(nodeR, maxDepth - 1);
@@ -63,8 +63,8 @@ public class TestQuestion04_1
 
     nodeL = new TreeNode();
     nodeR = new TreeNode();
-    node.left = nodeL;
-    node.right = nodeR;
+    node.addLeft(nodeL);
+    node.addRight(nodeR);
 
     makeUnbalancedTree(nodeL, maxDepth - 1);
   }

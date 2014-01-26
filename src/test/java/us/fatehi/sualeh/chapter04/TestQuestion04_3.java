@@ -23,12 +23,12 @@ public class TestQuestion04_3
     };
     Arrays.sort(arr);
 
-    TreeNode minimalBST = Question04_3.createMinimalBST(arr);
+    final TreeNode minimalBST = Question04_3.createMinimalBST(arr);
     TreeNodePrinter.print(minimalBST);
 
     assertTrue(Question04_1.isBalanced(minimalBST));
     assertEquals(4, Question04_1.maxDepth(minimalBST));
-    
+
   }
 
 }

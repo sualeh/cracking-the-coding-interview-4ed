@@ -2,7 +2,7 @@ package us.fatehi.sualeh.chapter01;
 
 
 import static org.junit.Assert.assertEquals;
-import static us.fatehi.sualeh.chapter01.Question01_2.*;
+import static us.fatehi.sualeh.chapter01.Question01_2.reverse;
 
 import org.junit.Before;
 import org.junit.Test;

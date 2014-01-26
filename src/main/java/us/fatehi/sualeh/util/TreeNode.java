@@ -4,9 +4,10 @@ package us.fatehi.sualeh.util;
 public class TreeNode
 {
 
-  final int value;
-  public TreeNode left;
-  public TreeNode right;
+  private final int value;
+  private TreeNode left;
+  private TreeNode right;
+  private TreeNode parent;
 
   public TreeNode()
   {
@@ -16,6 +17,44 @@ public class TreeNode
   public TreeNode(final int value)
   {
     this.value = value;
+  }
+
+  public void addLeft(final TreeNode nodeL)
+  {
+    left = nodeL;
+    if (nodeL != null)
+    {
+      nodeL.parent = this;
+    }
+  }
+
+  public void addRight(final TreeNode nodeR)
+  {
+    right = nodeR;
+    if (nodeR != null)
+    {
+      nodeR.parent = this;
+    }
+  }
+
+  public int value()
+  {
+    return value;
+  }
+
+  public TreeNode left()
+  {
+    return left;
+  }
+
+  public TreeNode parent()
+  {
+    return parent;
+  }
+
+  public TreeNode right()
+  {
+    return right;
   }
 
   @Override
