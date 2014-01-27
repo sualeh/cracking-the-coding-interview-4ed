@@ -2,7 +2,6 @@ package us.fatehi.sualeh.chapter04;
 
 
 import static org.junit.Assert.assertEquals;
-import static us.fatehi.sualeh.chapter04.Question04_6_2.commonAncestor;
 import static us.fatehi.sualeh.util.TreeNodePrinter.print;
 
 import org.junit.Before;
@@ -26,9 +25,41 @@ public class TestQuestion04_6
   @Test
   public void test1Question04_6_2()
   {
-    assertEquals(nodes[6], commonAncestor(nodes[0], nodes[8], nodes[5]));
-    assertEquals(nodes[7], commonAncestor(nodes[0], nodes[8], nodes[2]));
-    assertEquals(nodes[0], commonAncestor(nodes[0], nodes[8], nodes[4]));
+    // Parent is common ancestor
+    assertEquals(nodes[6],
+                 Question04_6_2.commonAncestor(nodes[0], nodes[8], nodes[5]));
+    // Common ancestor a few levels up
+    assertEquals(nodes[7],
+                 Question04_6_2.commonAncestor(nodes[0], nodes[8], nodes[2]));
+    // Common ancestor is root
+    assertEquals(nodes[0],
+                 Question04_6_2.commonAncestor(nodes[0], nodes[8], nodes[4]));
+    // One node is the parent of another
+    assertEquals(nodes[6],
+                 Question04_6_2.commonAncestor(nodes[0], nodes[8], nodes[6]));
+    // Same nodes
+    assertEquals(nodes[8],
+                 Question04_6_2.commonAncestor(nodes[0], nodes[8], nodes[8]));
+  }
+
+  @Test
+  public void test1Question04_6_3()
+  {
+    // Parent is common ancestor
+    assertEquals(nodes[6],
+                 Question04_6_3.commonAncestor(nodes[0], nodes[8], nodes[5]));
+    // Common ancestor a few levels up
+    assertEquals(nodes[7],
+                 Question04_6_3.commonAncestor(nodes[0], nodes[8], nodes[2]));
+    // Common ancestor is root
+    assertEquals(nodes[0],
+                 Question04_6_3.commonAncestor(nodes[0], nodes[8], nodes[4]));
+    // One node is the parent of another
+    assertEquals(nodes[6],
+                 Question04_6_3.commonAncestor(nodes[0], nodes[8], nodes[6]));
+    // Same nodes
+    assertEquals(nodes[8],
+                 Question04_6_3.commonAncestor(nodes[0], nodes[8], nodes[8]));
   }
 
   private TreeNode[] makeUnbalancedTree()
