@@ -16,6 +16,7 @@ public class TreeNodeTest
   protected TreeNode balancedRoot;
   protected TreeNode unbalancedRoot;
   protected TreeNode[] unbalancedNodes;
+  protected TreeNode sumRoot;
 
   @Before
   public void setup()
@@ -33,6 +34,10 @@ public class TreeNodeTest
     unbalancedNodes = knownTreeNodesList.toArray(new TreeNode[0]);
     System.out
       .println("Unbalanced tree nodes, in-order: " + knownTreeNodesList);
+
+    sumRoot = makeSumTree();
+    System.out.println("Sum tree:");
+    print(sumRoot);
   }
 
   private void inOrder(final List<TreeNode> list, final TreeNode node)
@@ -75,17 +80,29 @@ public class TreeNodeTest
       nodes[i] = new TreeNode(i);
     }
 
-    nodes[0].addLeft(nodes[7]);
-    nodes[0].addRight(nodes[3]);
-    nodes[7].addLeft(nodes[2]);
-    nodes[7].addRight(nodes[6]);
-    nodes[6].addLeft(nodes[5]);
-    nodes[6].addRight(nodes[8]);
+    nodes[0].addLeft(nodes[7]).addRight(nodes[3]);
+    nodes[7].addLeft(nodes[2]).addRight(nodes[6]);
+    nodes[6].addLeft(nodes[5]).addRight(nodes[8]);
     nodes[3].addRight(nodes[9]);
     nodes[9].addLeft(nodes[4]);
     nodes[4].addLeft(nodes[1]);
 
     return nodes[0];
+  }
+
+  private TreeNode makeSumTree()
+  {
+    TreeNode root, node;
+
+    root = new TreeNode(2);
+    root.addRight(new TreeNode(5)).right().addRight(new TreeNode(0));
+    node = root.addLeft(new TreeNode(3)).left();
+    node = node.addRight(new TreeNode(6)).addLeft(new TreeNode(-4)).left();
+    node = node.addLeft(new TreeNode(9)).addRight(new TreeNode(3)).right();
+    node = node.addLeft(new TreeNode(1)).addRight(new TreeNode(6)).left();
+    node.addRight(new TreeNode(2));
+
+    return root;
   }
 
 }
