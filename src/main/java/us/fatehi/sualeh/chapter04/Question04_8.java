@@ -27,7 +27,7 @@ public class Question04_8
    * -4 + 3 + 1 + 2). So, we keep going along every possible path. Now,
    * what if the path can start anywhere? In that case, we make a small
    * modification. On every node, we look “up” to see if we’ve found the
-   * sum. That is—rather than asking “does this node start a path with
+   * sum. That is — rather than asking “does this node start a path with
    * the sum?,” we ask “does this node complete a path with the sum?”
    */
 
