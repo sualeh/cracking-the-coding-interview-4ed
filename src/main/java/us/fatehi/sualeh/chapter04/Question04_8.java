@@ -38,7 +38,7 @@ public class Question04_8
 
   private static void findSum(final TreeNode head,
                               final int sum,
-                              final List<Integer> buffer,
+                              final List<Integer> path,
                               final int level)
   {
     if (head == null)
@@ -46,31 +46,27 @@ public class Question04_8
       return;
     }
 
+    path.add(head.value());
     int tmp = sum;
-    buffer.add(head.value());
     for (int i = level; i > -1; i--)
     {
-      tmp -= buffer.get(i);
+      tmp -= path.get(i);
       if (tmp == 0)
       {
-        print(buffer, i, level);
+        printSubPath(path, i, level);
       }
     }
-    final List<Integer> c1 = new ArrayList<>(buffer);
-    final List<Integer> c2 = new ArrayList<>(buffer);
-    findSum(head.left(), sum, c1, level + 1);
-    findSum(head.right(), sum, c2, level + 1);
+    final List<Integer> path1 = new ArrayList<>(path);
+    final List<Integer> path2 = new ArrayList<>(path);
+    findSum(head.left(), sum, path1, level + 1);
+    findSum(head.right(), sum, path2, level + 1);
   }
 
-  private static void print(final List<Integer> buffer,
-                            final int level,
-                            final int i2)
+  private static void printSubPath(final List<Integer> path,
+                                   int from,
+                                   final int to)
   {
-    for (int i = level; i <= i2; i++)
-    {
-      System.out.print(buffer.get(i) + " ");
-    }
-    System.out.println();
+    System.out.println(path.subList(from, to + 1));
   }
 
 }
