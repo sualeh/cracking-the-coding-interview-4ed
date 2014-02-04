@@ -19,22 +19,24 @@ public class TreeNode
     this.value = value;
   }
 
-  public void addLeft(final TreeNode nodeL)
+  public TreeNode addLeft(final TreeNode nodeL)
   {
     left = nodeL;
     if (nodeL != null)
     {
       nodeL.parent = this;
     }
+    return this;
   }
 
-  public void addRight(final TreeNode nodeR)
+  public TreeNode addRight(final TreeNode nodeR)
   {
     right = nodeR;
     if (nodeR != null)
     {
       nodeR.parent = this;
     }
+    return this;
   }
 
   public int value()
