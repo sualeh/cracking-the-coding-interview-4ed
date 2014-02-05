@@ -39,7 +39,7 @@ public class Question08_2
     final Collection<List<Point>> allPaths = new HashSet<>();
     getPaths(allPaths, new ArrayList<Point>(), boardWidth - 1, boardHeight - 1);
 
-    for (List<Point> path: allPaths)
+    for (final List<Point> path: allPaths)
     {
       Collections.reverse(path);
     }
@@ -52,6 +52,16 @@ public class Question08_2
                                final int x,
                                final int y)
   {
+    if (x < 0 || y < 0)
+    {
+      return;
+    }
+
+    if (!isFree(x, y))
+    {
+      return;
+    }
+
     final Point p = new Point(x, y);
     currentPath.add(p);
 
@@ -61,23 +71,14 @@ public class Question08_2
       return;
     }
 
-    if (isFree(x - 1, y))
-    { // Free - so go left (we are traveling backwards)
-      getPaths(allPaths, new ArrayList<>(currentPath), x - 1, y);
-    }
-
-    if (isFree(x, y - 1))
-    { // Free - so go up (we are traveling backwards)
-      getPaths(allPaths, new ArrayList<>(currentPath), x, y - 1);
-    }
+    // Try a path going left (we are traveling backwards)
+    getPaths(allPaths, new ArrayList<>(currentPath), x - 1, y);
+    // Try a path going up (we are traveling backwards)
+    getPaths(allPaths, new ArrayList<>(currentPath), x, y - 1);
   }
 
   private static boolean isFree(final int x, final int y)
   {
-    if (x < 0 || y < 0)
-    {
-      return false;
-    }
     // Implement any blocked squares here, by returning false
     return true;
   }
