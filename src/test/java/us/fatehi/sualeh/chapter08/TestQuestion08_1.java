@@ -14,7 +14,7 @@ public class TestQuestion08_1
 {
 
   @Test
-  public void test1Question08_1()
+  public void test1Question08_1a()
   {
 
     assertEquals(-1, fibo_iterative(-1));
@@ -27,7 +27,7 @@ public class TestQuestion08_1
   }
 
   @Test
-  public void test1Question08_2()
+  public void test1Question08_1b()
   {
 
     assertEquals(-1, fibo_recursive(-1));
