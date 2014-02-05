@@ -2,6 +2,8 @@ package us.fatehi.sualeh.chapter04;
 
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashSet;
 import java.util.List;
 
 import us.fatehi.sualeh.util.TreeNode;
@@ -31,36 +33,48 @@ public class Question04_8
    * the sum?,” we ask “does this node complete a path with the sum?”
    */
 
-  public static void findSum(final TreeNode head, final int sum)
+  public static Collection<List<Integer>> findSum(final TreeNode head,
+                                                  final int sum)
   {
-    findSum(head, sum, new ArrayList<Integer>());
+    return findSum(head, sum, new ArrayList<Integer>());
   }
 
-  private static void findSum(final TreeNode head,
-                              final int sum,
-                              final List<Integer> path)
+  private static Collection<List<Integer>> findSum(final TreeNode head,
+                                                   final int sum,
+                                                   final List<Integer> path)
   {
+    final Collection<List<Integer>> sumPaths = new HashSet<>();
+
     if (head == null)
     {
-      return;
+      return sumPaths;
     }
 
     path.add(head.value());
     final int pathLength = path.size();
-    
+
     int tmp = sum;
     for (int i = pathLength - 1; i > -1; i--)
     {
       tmp -= path.get(i);
       if (tmp == 0)
       {
-        System.out.println(path.subList(i, pathLength));
+        sumPaths.add(path.subList(i, pathLength));
       }
     }
-    
+
     // Traverse left and right, with copies of the current path
-    findSum(head.left(), sum, new ArrayList<>(path));
-    findSum(head.right(), sum, new ArrayList<>(path));
+    final Collection<List<Integer>> sumPathsLeft = findSum(head.left(),
+                                                           sum,
+                                                           new ArrayList<>(path));
+    final Collection<List<Integer>> sumPathsRight = findSum(head.right(),
+                                                            sum,
+                                                            new ArrayList<>(path));
+
+    sumPaths.addAll(sumPathsLeft);
+    sumPaths.addAll(sumPathsRight);
+
+    return sumPaths;
   }
 
 }
