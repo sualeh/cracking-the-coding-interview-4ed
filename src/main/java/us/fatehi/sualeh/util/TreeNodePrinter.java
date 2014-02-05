@@ -1,9 +1,16 @@
+/**
+ * This work is licensed under the Creative Commons Attribution-NonCommercial 3.0 Unported License. 
+ * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc/3.0/deed.en_US.
+ * 
+ * Copyright (c) 2013-2014 Sualeh Fatehi, sualeh@hotmail.com
+ */
 package us.fatehi.sualeh.util;
 
 
 /**
- * http://stackoverflow.com/questions/4965335/how-to-print-binary-tree-
- * diagram
+ * @see <a
+ *      href="http://stackoverflow.com/questions/4965335/how-to-print-binary-tree-diagram">How
+ *      to Print a Binary Tree Diagram</a>
  */
 public class TreeNodePrinter
 {
