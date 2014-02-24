@@ -4,7 +4,6 @@ package us.fatehi.sualeh.chapter08;
 import static us.fatehi.sualeh.chapter08.Question08_2.getPaths;
 
 import java.util.Collection;
-import java.util.Collections;
 import java.util.List;
 
 import org.junit.Test;
