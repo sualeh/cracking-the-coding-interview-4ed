@@ -1,14 +1,9 @@
 package us.fatehi.sualeh.chapter02;
 
-
 import us.fatehi.sualeh.util.LinkedListNode;
 
-/**
- * 2.2 Implement an algorithm to find the nth to last element of a
- * singly linked list.
- */
-public class Question02_2
-{
+/** 2.2 Implement an algorithm to find the nth to last element of a singly linked list. */
+public class Question02_2 {
 
   /*
    * Assumption: The minimum number of nodes in list is n. Algorithm: 1.
@@ -20,33 +15,27 @@ public class Question02_2
    * points to the nth node from the last as the distance between the
    * two is n. 4. Repeat Step 3.
    */
-  public static LinkedListNode nthToLast(final LinkedListNode head, final int n)
-  {
-    if (head == null || n < 1)
-    {
+  public static LinkedListNode nthToLast(final LinkedListNode head, final int n) {
+    if (head == null || n < 1) {
       return null;
     }
 
     LinkedListNode p1 = head;
     LinkedListNode p2 = head;
 
-    for (int j = 0; j < n - 1; ++j)
-    {
+    for (int j = 0; j < n - 1; ++j) {
       // skip n-1 steps ahead
-      if (p2 == null)
-      {
+      if (p2 == null) {
         return null; // not found since list size < n
       }
       p2 = p2.next;
     }
 
-    while (p2.next != null)
-    {
+    while (p2.next != null) {
       p1 = p1.next;
       p2 = p2.next;
     }
 
     return p1;
   }
-
 }

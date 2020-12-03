@@ -1,16 +1,13 @@
 package us.fatehi.sualeh.chapter02;
 
-
 import us.fatehi.sualeh.util.LinkedListNode;
 
 /**
- * 2.3 Implement an algorithm to delete a node in the middle of a single
- * linked list, given only access to that node. EXAMPLE Input: the node
- * ‘c’ from the linked list a->b->c->d->e Result: nothing is returned,
- * but the new linked list looks like a->b->d->e
+ * 2.3 Implement an algorithm to delete a node in the middle of a single linked list, given only
+ * access to that node. EXAMPLE Input: the node ‘c’ from the linked list a->b->c->d->e Result:
+ * nothing is returned, but the new linked list looks like a->b->d->e
  */
-public class Question02_3
-{
+public class Question02_3 {
 
   /*
    * The solution to this is to simply copy the data from the next node
@@ -20,10 +17,8 @@ public class Question02_3
    * that out. You could consider marking it as dummy in that case. This
    * is an issue you should discuss with your interviewer.
    */
-  public static boolean deleteNode(final LinkedListNode n)
-  {
-    if (n == null || n.next == null)
-    {
+  public static boolean deleteNode(final LinkedListNode n) {
+    if (n == null || n.next == null) {
       return false; // Failure
     }
 
@@ -33,5 +28,4 @@ public class Question02_3
 
     return true;
   }
-
 }

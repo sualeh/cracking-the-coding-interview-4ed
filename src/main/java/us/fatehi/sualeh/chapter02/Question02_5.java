@@ -1,17 +1,14 @@
 package us.fatehi.sualeh.chapter02;
 
-
 import us.fatehi.sualeh.util.LinkedListNode;
 
 /**
- * 2.5 Given a circular linked list, implement an algorithm which
- * returns node at the beginning of the loop. DEFINITION Circular linked
- * list: A (corrupt) linked list in which a node’s next pointer points
- * to an earlier node, so as to make a loop in the linked list. EXAMPLE
- * Input: A -> B -> C -> D -> E -> C [the same C as earlier] Output: C
+ * 2.5 Given a circular linked list, implement an algorithm which returns node at the beginning of
+ * the loop. DEFINITION Circular linked list: A (corrupt) linked list in which a node’s next pointer
+ * points to an earlier node, so as to make a loop in the linked list. EXAMPLE Input: A -> B -> C ->
+ * D -> E -> C [the same C as earlier] Output: C
  */
-public class Question02_5
-{
+public class Question02_5 {
 
   /*
    * If we move two pointers, one with speed 1 and another with speed 2,
@@ -38,25 +35,21 @@ public class Question02_5
    * keep n2 at MeetingPoint, and move them both at the same pace, they
    * will meet at LoopStart.
    */
-  public static LinkedListNode findBeginning(final LinkedListNode head)
-  {
+  public static LinkedListNode findBeginning(final LinkedListNode head) {
     LinkedListNode n1 = head;
     LinkedListNode n2 = head;
 
     // Find meeting point
-    while (n2 != null && n2.next != null)
-    {
+    while (n2 != null && n2.next != null) {
       n1 = n1.next;
       n2 = n2.next.next;
-      if (n1 == n2)
-      {
+      if (n1 == n2) {
         break;
       }
     }
 
     // Error check - there is no meeting point, and therefore no loop
-    if (n2 == null || n2.next == null)
-    {
+    if (n2 == null || n2.next == null) {
       return null;
     }
 
@@ -66,13 +59,11 @@ public class Question02_5
      * Loop Start.
      */
     n1 = head;
-    while (n1 != n2)
-    {
+    while (n1 != n2) {
       n1 = n1.next;
       n2 = n2.next;
     }
     // Now n2 points to the start of the loop.
     return n2;
   }
-
 }

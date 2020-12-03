@@ -1,26 +1,20 @@
 package us.fatehi.sualeh.chapter03;
 
-
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 3.3 Imagine a (literal) stack of plates. If the stack gets too high,
- * it might topple. Therefore, in real life, we would likely start a new
- * stack when the previous stack exceeds some threshold. Implement a
- * data structure SetOfStacks that mimics this. SetOfStacks should be
- * composed of several stacks, and should create a new stack once the
- * previous one exceeds capacity. SetOfStacks.push() and
- * SetOfStacks.pop() should behave identically to a single stack (that
- * is, pop() should return the same values as it would if there were
- * just a single stack). FOLLOW UP Implement a function popAt(int index)
- * which performs a pop operation on a specific sub-stack.
+ * 3.3 Imagine a (literal) stack of plates. If the stack gets too high, it might topple. Therefore,
+ * in real life, we would likely start a new stack when the previous stack exceeds some threshold.
+ * Implement a data structure SetOfStacks that mimics this. SetOfStacks should be composed of
+ * several stacks, and should create a new stack once the previous one exceeds capacity.
+ * SetOfStacks.push() and SetOfStacks.pop() should behave identically to a single stack (that is,
+ * pop() should return the same values as it would if there were just a single stack). FOLLOW UP
+ * Implement a function popAt(int index) which performs a pop operation on a specific sub-stack.
  */
-public class Question03_3
-{
+public class Question03_3 {
 
-  public static class SetOfStacks
-  {
+  public static class SetOfStacks {
 
     List<Stack> stacks = new ArrayList<>();
     int capacity = 3;
@@ -31,12 +25,10 @@ public class Question03_3
      * empty (after popping), then we should remove it from the list of
      * stacks.
      */
-    public int pop()
-    {
+    public int pop() {
       final Stack last = getLastStack();
       final int v = last.pop();
-      if (last.isEmpty())
-      {
+      if (last.isEmpty()) {
         stacks.remove(stacks.size() - 1);
       }
       return v;
@@ -49,16 +41,12 @@ public class Question03_3
      * capacity, we need to create a new stack. Our code should look
      * something like this:
      */
-    public void push(final int v)
-    {
+    public void push(final int v) {
       final Stack last = getLastStack();
-      if (last != null && !last.isAtCapacity())
-      {
+      if (last != null && !last.isAtCapacity()) {
         // add to last stack
         last.push(v);
-      }
-      else
-      {
+      } else {
         // must create new stack
         final Stack stack = new Stack(capacity);
         stack.push(v);
@@ -66,29 +54,22 @@ public class Question03_3
       }
     }
 
-    private Stack getLastStack()
-    {
-      if (stacks.isEmpty())
-      {
+    private Stack getLastStack() {
+      if (stacks.isEmpty()) {
         return null;
-      }
-      else
-      {
+      } else {
         return stacks.get(stacks.size() - 1);
       }
     }
   }
 
-  public static class Stack
-  {
+  public static class Stack {
 
-    class Node
-    {
+    class Node {
       int value;
       Node next;
 
-      public Node(final int v)
-      {
+      public Node(final int v) {
         value = v;
       }
     }
@@ -99,25 +80,20 @@ public class Question03_3
 
     Node top;
 
-    public Stack(final int capacity)
-    {
+    public Stack(final int capacity) {
       this.capacity = capacity;
     }
 
-    public boolean isAtCapacity()
-    {
+    public boolean isAtCapacity() {
       return count == capacity;
     }
 
-    public boolean isEmpty()
-    {
+    public boolean isEmpty() {
       return count == 0;
     }
 
-    public int pop()
-    {
-      if (!isEmpty())
-      {
+    public int pop() {
+      if (!isEmpty()) {
         count--;
 
         final Node pop = top;
@@ -127,10 +103,8 @@ public class Question03_3
       throw new IllegalArgumentException("Nothing to pop");
     }
 
-    public void push(final int value)
-    {
-      if (isAtCapacity())
-      {
+    public void push(final int value) {
+      if (isAtCapacity()) {
         throw new IllegalArgumentException("Stack is at capacity");
       }
 
@@ -140,7 +114,5 @@ public class Question03_3
 
       count++;
     }
-
   }
-
 }
