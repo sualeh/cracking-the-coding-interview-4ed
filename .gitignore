@@ -16,6 +16,7 @@ local.properties
 .settings/
 .loadpath
 target/
+pom.xml.versionsBackup
 
 # External tool builders
 .externalToolBuilders/
