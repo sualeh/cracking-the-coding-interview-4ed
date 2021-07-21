@@ -1,6 +1,6 @@
 package us.fatehi.sualeh.chapter03;
 
-import static us.fatehi.sualeh.testutil.TestUtil.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
@@ -27,13 +27,15 @@ public class TestQuestion03_5 {
     remove = queue.remove();
 
     assertEquals(4, queue.size());
-    assertEquals(1, remove);
+  final Object two = remove;
+    assertEquals(1, two);
     assertEquals(2, (int) queue.peek());
 
     remove = queue.remove();
 
     assertEquals(3, queue.size());
-    assertEquals(2, remove);
+  final Object two1 = remove;
+    assertEquals(2, two1);
     assertEquals(3, (int) queue.peek());
 
     queue.add(6);
@@ -44,7 +46,8 @@ public class TestQuestion03_5 {
     remove = queue.remove();
 
     assertEquals(3, queue.size());
-    assertEquals(3, remove);
+  final Object two2 = remove;
+    assertEquals(3, two2);
     assertEquals(4, (int) queue.peek());
   }
 }

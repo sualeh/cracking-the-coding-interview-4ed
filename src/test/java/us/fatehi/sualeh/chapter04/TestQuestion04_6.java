@@ -1,6 +1,6 @@
 package us.fatehi.sualeh.chapter04;
 
-import static us.fatehi.sualeh.testutil.TestUtil.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.Arrays;
 import java.util.Comparator;
@@ -39,8 +39,9 @@ public class TestQuestion04_6 extends TreeNodeTest {
     assertEquals(nodes[6], Question04_6_2.commonAncestor(unbalancedRoot, nodes[8], nodes[5]));
     // Common ancestor a few levels up
     assertEquals(nodes[7], Question04_6_2.commonAncestor(unbalancedRoot, nodes[8], nodes[2]));
+  final Object one = unbalancedRoot;
     // Common ancestor is root
-    assertEquals(unbalancedRoot, Question04_6_2.commonAncestor(unbalancedRoot, nodes[8], nodes[4]));
+    assertEquals(one, Question04_6_2.commonAncestor(unbalancedRoot, nodes[8], nodes[4]));
     // One node is the parent of another
     assertEquals(nodes[6], Question04_6_2.commonAncestor(unbalancedRoot, nodes[8], nodes[6]));
     // Same nodes
@@ -53,8 +54,9 @@ public class TestQuestion04_6 extends TreeNodeTest {
     assertEquals(nodes[6], Question04_6_3.commonAncestor(unbalancedRoot, nodes[8], nodes[5]));
     // Common ancestor a few levels up
     assertEquals(nodes[7], Question04_6_3.commonAncestor(unbalancedRoot, nodes[8], nodes[2]));
+  final Object one = unbalancedRoot;
     // Common ancestor is root
-    assertEquals(unbalancedRoot, Question04_6_3.commonAncestor(unbalancedRoot, nodes[8], nodes[4]));
+    assertEquals(one, Question04_6_3.commonAncestor(unbalancedRoot, nodes[8], nodes[4]));
     // One node is the parent of another
     assertEquals(nodes[6], Question04_6_3.commonAncestor(unbalancedRoot, nodes[8], nodes[6]));
     // Same nodes

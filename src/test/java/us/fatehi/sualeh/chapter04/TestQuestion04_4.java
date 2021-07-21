@@ -1,7 +1,7 @@
 package us.fatehi.sualeh.chapter04;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static us.fatehi.sualeh.chapter04.Question04_4.findLevelLinkList;
-import static us.fatehi.sualeh.testutil.TestUtil.assertEquals;
 
 import java.util.LinkedList;
 import java.util.List;

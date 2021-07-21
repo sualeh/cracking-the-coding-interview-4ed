@@ -1,8 +1,8 @@
 package us.fatehi.sualeh.chapter04;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static us.fatehi.sualeh.chapter04.Question04_5.inorderSucc;
-import static us.fatehi.sualeh.testutil.TestUtil.assertEquals;
 
 import org.junit.jupiter.api.Test;
 

@@ -1,8 +1,8 @@
 package us.fatehi.sualeh.chapter02;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static us.fatehi.sualeh.chapter02.Question02_2.nthToLast;
 import static us.fatehi.sualeh.testutil.LinkedListNodeUtil.linkedList;
-import static us.fatehi.sualeh.testutil.TestUtil.assertEquals;
 
 import org.junit.jupiter.api.Test;
 

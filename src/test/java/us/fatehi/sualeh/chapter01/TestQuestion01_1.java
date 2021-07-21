@@ -1,9 +1,9 @@
 package us.fatehi.sualeh.chapter01;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static us.fatehi.sualeh.chapter01.Question01_1.isUniqueChars;
 import static us.fatehi.sualeh.chapter01.Question01_1.isUniqueChars2;
 import static us.fatehi.sualeh.chapter01.Question01_1.isUniqueCharsUnicode;
-import static us.fatehi.sualeh.testutil.TestUtil.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
@@ -17,10 +17,7 @@ public class TestQuestion01_1 {
     for (int i = 0; i < words.length; i++) {
       final String word = words[i];
       final boolean expected = hasUniqueChars[i];
-      assertEquals(
-          String.format("\"%s\" %s unique characters", word, expected ? "has" : "does not have"),
-          expected,
-          isUniqueChars(word));
+      assertEquals(expected, isUniqueChars(word), String.format("\"%s\" %s unique characters", word, expected ? "has" : "does not have"));
     }
   }
 
@@ -33,10 +30,7 @@ public class TestQuestion01_1 {
       final String word = words[i];
       final boolean expected = hasUniqueChars[i];
       try {
-        assertEquals(
-            String.format("\"%s\" %s unique characters", word, expected ? "has" : "does not have"),
-            expected,
-            isUniqueChars2(word));
+        assertEquals(expected, isUniqueChars2(word), String.format("\"%s\" %s unique characters", word, expected ? "has" : "does not have"));
       } catch (final Exception e) {
         throw new RuntimeException(word);
       }
@@ -55,10 +49,7 @@ public class TestQuestion01_1 {
     for (int i = 0; i < words.length; i++) {
       final String word = words[i];
       final boolean expected = hasUniqueChars[i];
-      assertEquals(
-          String.format("\"%s\" %s unique characters", word, expected ? "has" : "does not have"),
-          expected,
-          isUniqueChars2(word));
+      assertEquals(expected, isUniqueChars2(word), String.format("\"%s\" %s unique characters", word, expected ? "has" : "does not have"));
     }
   }
 
@@ -70,10 +61,7 @@ public class TestQuestion01_1 {
     for (int i = 0; i < words.length; i++) {
       final String word = words[i];
       final boolean expected = hasUniqueChars[i];
-      assertEquals(
-          String.format("\"%s\" %s unique characters", word, expected ? "has" : "does not have"),
-          expected,
-          isUniqueCharsUnicode(word));
+      assertEquals(expected, isUniqueCharsUnicode(word), String.format("\"%s\" %s unique characters", word, expected ? "has" : "does not have"));
     }
   }
 }

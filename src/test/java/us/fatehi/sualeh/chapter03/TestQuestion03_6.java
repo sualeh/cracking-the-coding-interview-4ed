@@ -1,7 +1,7 @@
 package us.fatehi.sualeh.chapter03;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static us.fatehi.sualeh.chapter03.Question03_6.sort;
-import static us.fatehi.sualeh.testutil.TestUtil.assertEquals;
 
 import java.util.ArrayList;
 import java.util.Collections;

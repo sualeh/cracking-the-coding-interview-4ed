@@ -1,8 +1,8 @@
 package us.fatehi.sualeh.chapter08;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static us.fatehi.sualeh.chapter08.Question08_1.fibo_iterative;
 import static us.fatehi.sualeh.chapter08.Question08_1.fibo_recursive;
-import static us.fatehi.sualeh.testutil.TestUtil.assertEquals;
 
 import org.junit.jupiter.api.Test;
 

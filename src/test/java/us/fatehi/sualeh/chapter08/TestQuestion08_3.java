@@ -1,8 +1,8 @@
 package us.fatehi.sualeh.chapter08;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static us.fatehi.sualeh.chapter08.Question08_3.getSubsets;
 import static us.fatehi.sualeh.chapter08.Question08_3.getSubsets2;
-import static us.fatehi.sualeh.testutil.TestUtil.assertEquals;
 
 import java.util.Arrays;
 import java.util.Collections;

@@ -1,8 +1,8 @@
 package us.fatehi.sualeh.chapter02;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static us.fatehi.sualeh.chapter02.Question02_5.findBeginning;
 import static us.fatehi.sualeh.testutil.LinkedListNodeUtil.linkedList;
-import static us.fatehi.sualeh.testutil.TestUtil.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
@@ -17,8 +17,9 @@ public class TestQuestion02_5 {
     LinkedListNode result;
 
     result = findBeginning(head);
+  final Object two = result;
 
-    assertEquals(null, result);
+    assertEquals(null, two);
 
     // Introduce loop
     LinkedListNode startLoopNode = head;
@@ -34,7 +35,9 @@ public class TestQuestion02_5 {
     lastNode.next = startLoopNode;
 
     result = findBeginning(head);
+  final Object one = startLoopNode;
+  final Object two1 = result;
 
-    assertEquals(startLoopNode, result);
+    assertEquals(one, two1);
   }
 }

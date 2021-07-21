@@ -1,9 +1,9 @@
 package us.fatehi.sualeh.chapter04;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static us.fatehi.sualeh.chapter04.Question04_1.isBalanced;
 import static us.fatehi.sualeh.chapter04.Question04_1.maxDepth;
 import static us.fatehi.sualeh.chapter04.Question04_3.createMinimalBST;
-import static us.fatehi.sualeh.testutil.TestUtil.assertEquals;
 import static us.fatehi.sualeh.testutil.TestUtil.assertTrue;
 import static us.fatehi.sualeh.util.TreeNodePrinter.print;
 

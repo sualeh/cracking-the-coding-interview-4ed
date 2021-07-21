@@ -6,14 +6,6 @@ import org.junit.jupiter.api.Assertions;
 
 public class TestUtil {
 
-  public static void assertEquals(final Object one, final Object two) {
-    Assertions.assertEquals(one, two);
-  }
-
-  public static void assertEquals(final String msg, final Object one, final Object two) {
-    Assertions.assertEquals(one, two, msg);
-  }
-
   public static void assertTrue(final boolean bool) {
     Assertions.assertTrue(bool);
   }
