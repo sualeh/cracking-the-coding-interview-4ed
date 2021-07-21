@@ -1,7 +1,7 @@
 package us.fatehi.sualeh.chapter04;
 
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static us.fatehi.sualeh.chapter04.Question04_2.search;
-import static us.fatehi.sualeh.testutil.TestUtil.assertTrue;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

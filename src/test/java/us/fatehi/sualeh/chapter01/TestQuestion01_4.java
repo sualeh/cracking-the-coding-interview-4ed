@@ -1,7 +1,7 @@
 package us.fatehi.sualeh.chapter01;
 
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static us.fatehi.sualeh.chapter01.Question01_4.isAnagram;
-import static us.fatehi.sualeh.testutil.TestUtil.assertTrue;
 
 import org.junit.jupiter.api.Test;
 

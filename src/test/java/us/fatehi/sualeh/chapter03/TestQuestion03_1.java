@@ -1,7 +1,7 @@
 package us.fatehi.sualeh.chapter03;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static us.fatehi.sualeh.testutil.TestUtil.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.Arrays;
 
@@ -19,9 +19,9 @@ public class TestQuestion03_1 {
     stack.push(1, 2);
     System.out.println(printStack(stack));
 
-    assertTrue(printStack(stack), !stack.isEmpty(0));
-    assertTrue(printStack(stack), !stack.isEmpty(1));
-    assertTrue(printStack(stack), stack.isEmpty(2));
+    assertTrue(!stack.isEmpty(0), printStack(stack));
+    assertTrue(!stack.isEmpty(1), printStack(stack));
+    assertTrue(stack.isEmpty(2), printStack(stack));
 
     final int peek0 = stack.peek(0);
     final int peek1 = stack.peek(1);
@@ -37,9 +37,9 @@ public class TestQuestion03_1 {
     System.out.println(printStack(stack));
 
     assertEquals(2, pop2, printStack(stack));
-    assertTrue(printStack(stack), !stack.isEmpty(0));
-    assertTrue(printStack(stack), stack.isEmpty(1));
-    assertTrue(printStack(stack), stack.isEmpty(2));
+    assertTrue(!stack.isEmpty(0), printStack(stack));
+    assertTrue(stack.isEmpty(1), printStack(stack));
+    assertTrue(stack.isEmpty(2), printStack(stack));
   }
 
   private String printStack(final ArrayStack stack) {

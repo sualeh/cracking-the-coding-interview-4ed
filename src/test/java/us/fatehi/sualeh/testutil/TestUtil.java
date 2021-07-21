@@ -2,17 +2,7 @@ package us.fatehi.sualeh.testutil;
 
 import java.util.Scanner;
 
-import org.junit.jupiter.api.Assertions;
-
 public class TestUtil {
-
-  public static void assertTrue(final boolean bool) {
-    Assertions.assertTrue(bool);
-  }
-
-  public static void assertTrue(final String msg, final boolean bool) {
-    Assertions.assertTrue(bool, msg);
-  }
 
   public static int[][] readIntArray(final String[] inputLines) {
 

@@ -1,10 +1,10 @@
 package us.fatehi.sualeh.chapter02;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static us.fatehi.sualeh.chapter02.Question02_3.deleteNode;
 import static us.fatehi.sualeh.testutil.LinkedListNodeUtil.linkedList;
 import static us.fatehi.sualeh.testutil.LinkedListNodeUtil.toList;
-import static us.fatehi.sualeh.testutil.TestUtil.assertTrue;
 
 import java.util.Arrays;
 
