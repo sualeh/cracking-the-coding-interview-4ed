@@ -1,35 +1,30 @@
 package us.fatehi.sualeh.chapter04;
 
-
-import static org.junit.Assert.assertTrue;
 import static us.fatehi.sualeh.chapter04.Question04_2.search;
+import static us.fatehi.sualeh.testutil.TestUtil.assertTrue;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import us.fatehi.sualeh.util.Graph;
 import us.fatehi.sualeh.util.Graph.Node;
 
-public class TestQuestion04_2
-{
+public class TestQuestion04_2 {
 
   private Graph graph;
 
-  @Before
-  public void setup()
-  {
+  @BeforeEach
+  public void setup() {
     graph = makeGraph();
   }
 
   @Test
-  public void test1Question04_2()
-  {
+  public void test1Question04_2() {
     assertTrue(search(graph, graph.getNode("7"), graph.getNode("9")));
     assertTrue(!search(graph, graph.getNode("7"), graph.getNode("5")));
   }
 
-  private Graph makeGraph()
-  {
+  private Graph makeGraph() {
     final Graph g = new Graph();
     final Node seven = g.addNode("7");
     final Node five = g.addNode("5");
@@ -47,5 +42,4 @@ public class TestQuestion04_2
 
     return g;
   }
-
 }

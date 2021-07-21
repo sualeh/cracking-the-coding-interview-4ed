@@ -1,13 +1,13 @@
 package us.fatehi.sualeh.chapter04;
 
 
-import static org.junit.Assert.assertEquals;
+import static us.fatehi.sualeh.testutil.TestUtil.assertEquals;
 import static us.fatehi.sualeh.chapter04.Question04_4.findLevelLinkList;
 
 import java.util.LinkedList;
 import java.util.List;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import us.fatehi.sualeh.testutil.TreeNodeTest;
 import us.fatehi.sualeh.util.TreeNode;

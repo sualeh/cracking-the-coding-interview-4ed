@@ -1,13 +1,13 @@
 package us.fatehi.sualeh.chapter01;
 
 
-import static org.junit.Assert.assertTrue;
+import static us.fatehi.sualeh.testutil.TestUtil.assertTrue;
 import static us.fatehi.sualeh.chapter01.Question01_7.setZeros;
 import static us.fatehi.sualeh.testutil.TestUtil.readIntArray;
 
 import java.util.Arrays;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class TestQuestion01_7
 {

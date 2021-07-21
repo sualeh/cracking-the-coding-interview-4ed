@@ -1,11 +1,11 @@
 package us.fatehi.sualeh.chapter08;
 
 
-import static org.junit.Assert.assertEquals;
+import static us.fatehi.sualeh.testutil.TestUtil.assertEquals;
 import static us.fatehi.sualeh.chapter08.Question08_1.fibo_iterative;
 import static us.fatehi.sualeh.chapter08.Question08_1.fibo_recursive;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import us.fatehi.sualeh.testutil.TreeNodeTest;
 

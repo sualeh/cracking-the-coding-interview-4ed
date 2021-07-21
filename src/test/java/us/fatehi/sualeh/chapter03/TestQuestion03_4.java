@@ -1,7 +1,7 @@
 package us.fatehi.sualeh.chapter03;
 
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class TestQuestion03_4
 {

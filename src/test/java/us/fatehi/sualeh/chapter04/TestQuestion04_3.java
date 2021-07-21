@@ -1,14 +1,14 @@
 package us.fatehi.sualeh.chapter04;
 
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static us.fatehi.sualeh.testutil.TestUtil.assertEquals;
+import static us.fatehi.sualeh.testutil.TestUtil.assertTrue;
 import static us.fatehi.sualeh.chapter04.Question04_1.isBalanced;
 import static us.fatehi.sualeh.chapter04.Question04_1.maxDepth;
 import static us.fatehi.sualeh.chapter04.Question04_3.createMinimalBST;
 import static us.fatehi.sualeh.util.TreeNodePrinter.print;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import us.fatehi.sualeh.util.TreeNode;
 

@@ -1,9 +1,9 @@
 package us.fatehi.sualeh.chapter03;
 
 
-import static org.junit.Assert.assertEquals;
+import static us.fatehi.sualeh.testutil.TestUtil.assertEquals;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import us.fatehi.sualeh.chapter03.Question03_3.SetOfStacks;
 

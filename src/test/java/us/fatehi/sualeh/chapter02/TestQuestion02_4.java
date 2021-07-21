@@ -1,14 +1,14 @@
 package us.fatehi.sualeh.chapter02;
 
 
-import static org.junit.Assert.assertEquals;
+import static us.fatehi.sualeh.testutil.TestUtil.assertEquals;
 import static us.fatehi.sualeh.chapter02.Question02_4.addLists;
 import static us.fatehi.sualeh.testutil.LinkedListNodeUtil.linkedList;
 import static us.fatehi.sualeh.testutil.LinkedListNodeUtil.toList;
 
 import java.util.Arrays;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import us.fatehi.sualeh.util.LinkedListNode;
 

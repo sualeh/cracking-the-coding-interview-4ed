@@ -1,19 +1,19 @@
 package us.fatehi.sualeh.chapter04;
 
-import static org.junit.Assert.assertEquals;
 import static us.fatehi.sualeh.chapter04.Question04_8.findSum;
+import static us.fatehi.sualeh.testutil.TestUtil.assertEquals;
 
 import java.util.Collection;
 import java.util.List;
 
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import us.fatehi.sualeh.testutil.TreeNodeTest;
 
 public class TestQuestion04_8 extends TreeNodeTest {
 
-  @Ignore
+  @Disabled
   @Test
   public void test1Question04_8() {
     final int sum = 5;

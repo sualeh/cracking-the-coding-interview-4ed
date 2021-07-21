@@ -6,7 +6,7 @@ import static us.fatehi.sualeh.chapter08.Question08_2.getPaths;
 import java.util.Collection;
 import java.util.List;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import us.fatehi.sualeh.testutil.TreeNodeTest;
 import us.fatehi.sualeh.util.Point;
