@@ -8,8 +8,6 @@ import java.util.Comparator;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import us.fatehi.crack4.chapter04.Question04_6_2;
-import us.fatehi.crack4.chapter04.Question04_6_3;
 import us.fatehi.crack4.testutil.TreeNodeTest;
 import us.fatehi.crack4.util.TreeNode;
 

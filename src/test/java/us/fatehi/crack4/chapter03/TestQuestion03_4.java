@@ -2,8 +2,6 @@ package us.fatehi.crack4.chapter03;
 
 import org.junit.jupiter.api.Test;
 
-import us.fatehi.crack4.chapter03.Question03_4;
-
 public class TestQuestion03_4 {
 
   @Test
