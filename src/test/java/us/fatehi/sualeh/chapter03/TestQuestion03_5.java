@@ -27,14 +27,14 @@ public class TestQuestion03_5 {
     remove = queue.remove();
 
     assertEquals(4, queue.size());
-  final Object two = remove;
+    final Object two = remove;
     assertEquals(1, two);
     assertEquals(2, (int) queue.peek());
 
     remove = queue.remove();
 
     assertEquals(3, queue.size());
-  final Object two1 = remove;
+    final Object two1 = remove;
     assertEquals(2, two1);
     assertEquals(3, (int) queue.peek());
 
@@ -46,7 +46,7 @@ public class TestQuestion03_5 {
     remove = queue.remove();
 
     assertEquals(3, queue.size());
-  final Object two2 = remove;
+    final Object two2 = remove;
     assertEquals(3, two2);
     assertEquals(4, (int) queue.peek());
   }

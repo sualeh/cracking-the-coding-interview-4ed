@@ -39,7 +39,7 @@ public class TestQuestion04_6 extends TreeNodeTest {
     assertEquals(nodes[6], Question04_6_2.commonAncestor(unbalancedRoot, nodes[8], nodes[5]));
     // Common ancestor a few levels up
     assertEquals(nodes[7], Question04_6_2.commonAncestor(unbalancedRoot, nodes[8], nodes[2]));
-  final Object one = unbalancedRoot;
+    final Object one = unbalancedRoot;
     // Common ancestor is root
     assertEquals(one, Question04_6_2.commonAncestor(unbalancedRoot, nodes[8], nodes[4]));
     // One node is the parent of another
@@ -54,7 +54,7 @@ public class TestQuestion04_6 extends TreeNodeTest {
     assertEquals(nodes[6], Question04_6_3.commonAncestor(unbalancedRoot, nodes[8], nodes[5]));
     // Common ancestor a few levels up
     assertEquals(nodes[7], Question04_6_3.commonAncestor(unbalancedRoot, nodes[8], nodes[2]));
-  final Object one = unbalancedRoot;
+    final Object one = unbalancedRoot;
     // Common ancestor is root
     assertEquals(one, Question04_6_3.commonAncestor(unbalancedRoot, nodes[8], nodes[4]));
     // One node is the parent of another

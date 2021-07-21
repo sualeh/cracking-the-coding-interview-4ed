@@ -17,7 +17,10 @@ public class TestQuestion01_1 {
     for (int i = 0; i < words.length; i++) {
       final String word = words[i];
       final boolean expected = hasUniqueChars[i];
-      assertEquals(expected, isUniqueChars(word), String.format("\"%s\" %s unique characters", word, expected ? "has" : "does not have"));
+      assertEquals(
+          expected,
+          isUniqueChars(word),
+          String.format("\"%s\" %s unique characters", word, expected ? "has" : "does not have"));
     }
   }
 
@@ -30,7 +33,10 @@ public class TestQuestion01_1 {
       final String word = words[i];
       final boolean expected = hasUniqueChars[i];
       try {
-        assertEquals(expected, isUniqueChars2(word), String.format("\"%s\" %s unique characters", word, expected ? "has" : "does not have"));
+        assertEquals(
+            expected,
+            isUniqueChars2(word),
+            String.format("\"%s\" %s unique characters", word, expected ? "has" : "does not have"));
       } catch (final Exception e) {
         throw new RuntimeException(word);
       }
@@ -49,7 +55,10 @@ public class TestQuestion01_1 {
     for (int i = 0; i < words.length; i++) {
       final String word = words[i];
       final boolean expected = hasUniqueChars[i];
-      assertEquals(expected, isUniqueChars2(word), String.format("\"%s\" %s unique characters", word, expected ? "has" : "does not have"));
+      assertEquals(
+          expected,
+          isUniqueChars2(word),
+          String.format("\"%s\" %s unique characters", word, expected ? "has" : "does not have"));
     }
   }
 
@@ -61,7 +70,10 @@ public class TestQuestion01_1 {
     for (int i = 0; i < words.length; i++) {
       final String word = words[i];
       final boolean expected = hasUniqueChars[i];
-      assertEquals(expected, isUniqueCharsUnicode(word), String.format("\"%s\" %s unique characters", word, expected ? "has" : "does not have"));
+      assertEquals(
+          expected,
+          isUniqueCharsUnicode(word),
+          String.format("\"%s\" %s unique characters", word, expected ? "has" : "does not have"));
     }
   }
 }

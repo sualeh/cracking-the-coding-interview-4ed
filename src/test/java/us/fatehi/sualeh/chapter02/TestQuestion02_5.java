@@ -17,7 +17,7 @@ public class TestQuestion02_5 {
     LinkedListNode result;
 
     result = findBeginning(head);
-  final Object two = result;
+    final Object two = result;
 
     assertEquals(null, two);
 
@@ -35,8 +35,8 @@ public class TestQuestion02_5 {
     lastNode.next = startLoopNode;
 
     result = findBeginning(head);
-  final Object one = startLoopNode;
-  final Object two1 = result;
+    final Object one = startLoopNode;
+    final Object two1 = result;
 
     assertEquals(one, two1);
   }
