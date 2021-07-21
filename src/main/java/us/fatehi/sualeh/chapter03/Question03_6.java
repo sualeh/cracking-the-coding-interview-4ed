@@ -1,16 +1,13 @@
 package us.fatehi.sualeh.chapter03;
 
-
 import java.util.Stack;
 
 /**
- * 3.6 Write a program to sort a stack in ascending order. You should
- * not make any assumptions about how the stack is implemented. The
- * following are the only functions that should be used to write this
- * program: push | pop | peek | isEmpty.
+ * 3.6 Write a program to sort a stack in ascending order. You should not make any assumptions about
+ * how the stack is implemented. The following are the only functions that should be used to write
+ * this program: push | pop | peek | isEmpty.
  */
-public class Question03_6
-{
+public class Question03_6 {
 
   /*
    * Sorting can be performed with one more stack. The idea is to pull
@@ -21,26 +18,21 @@ public class Question03_6
    * we’re back where we started. The algorithm is O(N^2) and appears
    * below.
    */
-  public static void sort(final Stack<Integer> s)
-  {
-    final Stack<Integer> r = new Stack<Integer>();
+  public static void sort(final Stack<Integer> s) {
+    final Stack<Integer> r = new Stack<>();
 
     // Sort in descending order
-    while (!s.isEmpty())
-    {
+    while (!s.isEmpty()) {
       final int tmp = s.pop();
-      while (!r.isEmpty() && r.peek() < tmp)
-      {
+      while (!r.isEmpty() && r.peek() < tmp) {
         s.push(r.pop());
       }
       r.push(tmp);
     }
 
     // Rebuild the stack in ascending order
-    while (!r.isEmpty())
-    {
+    while (!r.isEmpty()) {
       s.push(r.pop());
     }
   }
-
 }

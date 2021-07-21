@@ -1,18 +1,15 @@
 package us.fatehi.sualeh.chapter03;
 
-
 import static us.fatehi.sualeh.testutil.TestUtil.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
 import us.fatehi.sualeh.chapter03.Question03_5.MyQueue;
 
-public class TestQuestion03_5
-{
+public class TestQuestion03_5 {
 
   @Test
-  public void test1Question03_5()
-  {
+  public void test1Question03_5() {
 
     final MyQueue<Integer> queue = new MyQueue<>();
 
@@ -49,7 +46,5 @@ public class TestQuestion03_5
     assertEquals(3, queue.size());
     assertEquals(3, remove);
     assertEquals(4, (int) queue.peek());
-
   }
-
 }

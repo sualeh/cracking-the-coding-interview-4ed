@@ -1,13 +1,10 @@
 package us.fatehi.sualeh.chapter01;
 
-
 /**
- * 1.6 Given an image represented by an NxN matrix, where each pixel in
- * the image is 4 bytes, write a method to rotate the image by 90
- * degrees. Can you do this in place?
+ * 1.6 Given an image represented by an NxN matrix, where each pixel in the image is 4 bytes, write
+ * a method to rotate the image by 90 degrees. Can you do this in place?
  */
-public class Question01_6
-{
+public class Question01_6 {
 
   /*
    * The rotation can be performed in layers, where you perform a cyclic
@@ -18,14 +15,11 @@ public class Question01_6
    * exterior elements are rotated, we then rotate the interior region’s
    * edges.
    */
-  public static void rotate(final int[][] matrix, final int n)
-  {
-    for (int layer = 0; layer < n / 2; ++layer)
-    {
+  public static void rotate(final int[][] matrix, final int n) {
+    for (int layer = 0; layer < n / 2; ++layer) {
       final int first = layer;
       final int last = n - 1 - layer;
-      for (int i = first; i < last; ++i)
-      {
+      for (int i = first; i < last; ++i) {
         final int offset = i - first;
         final int top = matrix[first][i]; // save top
         // left -> top
@@ -42,5 +36,4 @@ public class Question01_6
       }
     }
   }
-
 }

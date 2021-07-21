@@ -1,15 +1,12 @@
 package us.fatehi.sualeh.chapter04;
 
-
 import us.fatehi.sualeh.util.TreeNode;
 
 /**
- * 4.5 Write an algorithm to find the ‘next’ node (e.g., in-order
- * successor) of a given node in a binary search tree where each node
- * has a link to its parent.
+ * 4.5 Write an algorithm to find the ‘next’ node (e.g., in-order successor) of a given node in a
+ * binary search tree where each node has a link to its parent.
  */
-public class Question04_5
-{
+public class Question04_5 {
 
   /*
    * We approach this problem by thinking very, very carefully about
@@ -23,23 +20,16 @@ public class Question04_5
    * is the successor of X 2.b. If X was a right child (P.right = X),
    * then we have fully visited P, so we call successor(P).
    */
-  public static TreeNode inorderSucc(TreeNode e)
-  {
-    if (e != null)
-    {
+  public static TreeNode inorderSucc(TreeNode e) {
+    if (e != null) {
       TreeNode p;
       // Found right children -> return 1st inorder node on right
-      if (e.right() != null)
-      {
+      if (e.right() != null) {
         p = leftMostChild(e.right());
-      }
-      else
-      {
+      } else {
         // Go up until we’re on left instead of right (case 2b)
-        while ((p = e.parent()) != null)
-        {
-          if (p.left() == e)
-          {
+        while ((p = e.parent()) != null) {
+          if (p.left() == e) {
             break;
           }
           e = p;
@@ -50,17 +40,13 @@ public class Question04_5
     return null;
   }
 
-  public static TreeNode leftMostChild(TreeNode e)
-  {
-    if (e == null)
-    {
+  public static TreeNode leftMostChild(TreeNode e) {
+    if (e == null) {
       return null;
     }
-    while (e.left() != null)
-    {
+    while (e.left() != null) {
       e = e.left();
     }
     return e;
   }
-
 }

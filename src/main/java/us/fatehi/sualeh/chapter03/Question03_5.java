@@ -1,14 +1,9 @@
 package us.fatehi.sualeh.chapter03;
 
-
 import java.util.Stack;
 
-/**
- * 3.5 Implement a MyQueue class which implements a queue using two
- * stacks.
- */
-public class Question03_5
-{
+/** 3.5 Implement a MyQueue class which implements a queue using two stacks. */
+public class Question03_5 {
 
   /*
    * Since the major difference between a queue and a stack is the order
@@ -26,52 +21,41 @@ public class Question03_5
    * and peek and pop from s2. When s2 is empty, we’ll transfer all the
    * elements from s1 onto s2, in reverse order.
    */
-  public static class MyQueue<T>
-  {
+  public static class MyQueue<T> {
     Stack<T> s1, s2;
 
-    public MyQueue()
-    {
-      s1 = new Stack<T>();
-      s2 = new Stack<T>();
+    public MyQueue() {
+      s1 = new Stack<>();
+      s2 = new Stack<>();
     }
 
-    public void add(final T value)
-    {
+    public void add(final T value) {
       s1.push(value);
     }
 
-    public T peek()
-    {
-      if (!s2.empty())
-      {
+    public T peek() {
+      if (!s2.empty()) {
         return s2.peek();
       }
 
-      while (!s1.empty())
-      {
+      while (!s1.empty()) {
         s2.push(s1.pop());
       }
       return s2.peek();
     }
 
-    public T remove()
-    {
-      if (!s2.empty())
-      {
+    public T remove() {
+      if (!s2.empty()) {
         return s2.pop();
       }
-      while (!s1.empty())
-      {
+      while (!s1.empty()) {
         s2.push(s1.pop());
       }
       return s2.pop();
     }
 
-    public int size()
-    {
+    public int size() {
       return s1.size() + s2.size();
     }
   }
-
 }

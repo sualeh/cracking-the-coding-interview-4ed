@@ -1,13 +1,10 @@
 package us.fatehi.sualeh.chapter03;
 
-
 /**
- * 3.2 How would you design a stack which, in addition to push and pop,
- * also has a function min which returns the minimum element? Push, pop
- * and min should all operate in O(1) time.
+ * 3.2 How would you design a stack which, in addition to push and pop, also has a function min
+ * which returns the minimum element? Push, pop and min should all operate in O(1) time.
  */
-public class Question03_2
-{
+public class Question03_2 {
 
   /*
    * You can implement this by having each node in the stack keep track
@@ -16,17 +13,14 @@ public class Question03_2
    * onto the stack, the element is given the current minimum. It sets
    * its “local min” to be the min.
    */
-  public static class StackWithMin
-  {
+  public static class StackWithMin {
 
-    class NodeWithMin
-    {
+    class NodeWithMin {
       int value;
       int min;
       NodeWithMin next;
 
-      public NodeWithMin(final int v, final int min)
-      {
+      public NodeWithMin(final int v, final int min) {
         value = v;
         this.min = min;
       }
@@ -34,27 +28,20 @@ public class Question03_2
 
     NodeWithMin top;
 
-    public int min()
-    {
-      if (top == null)
-      {
+    public int min() {
+      if (top == null) {
         return Integer.MAX_VALUE;
-      }
-      else
-      {
+      } else {
         return peek().min;
       }
     }
 
-    public NodeWithMin peek()
-    {
+    public NodeWithMin peek() {
       return top;
     }
 
-    public NodeWithMin pop()
-    {
-      if (!(top == null))
-      {
+    public NodeWithMin pop() {
+      if (!(top == null)) {
         final NodeWithMin pop = top;
         top = top.next;
         return pop;
@@ -62,14 +49,11 @@ public class Question03_2
       return null;
     }
 
-    public void push(final int value)
-    {
+    public void push(final int value) {
       final int newMin = Math.min(value, min());
       final NodeWithMin t = new NodeWithMin(value, newMin);
       t.next = top;
       top = t;
     }
-
   }
-
 }

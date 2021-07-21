@@ -1,6 +1,5 @@
 package us.fatehi.sualeh.chapter04;
 
-
 import java.util.Stack;
 
 import us.fatehi.sualeh.util.Graph;
@@ -8,11 +7,10 @@ import us.fatehi.sualeh.util.Graph.Node;
 import us.fatehi.sualeh.util.Graph.State;
 
 /**
- * 4.2 Given a directed graph, design an algorithm to find out whether
- * there is a route between two nodes.
+ * 4.2 Given a directed graph, design an algorithm to find out whether there is a route between two
+ * nodes.
  */
-public class Question04_2
-{
+public class Question04_2 {
 
   /*
    * This problem can be solved by just simple graph traversal, such as
@@ -22,31 +20,22 @@ public class Question04_2
    * as ‘already visited’ to avoid cycles and repetition of the nodes.
    */
 
-  public static boolean search(final Graph g, final Node start, final Node end)
-  {
-    final Stack<Node> q = new Stack<Node>();
-    for (final Node u: g.getNodes())
-    {
+  public static boolean search(final Graph g, final Node start, final Node end) {
+    final Stack<Node> q = new Stack<>();
+    for (final Node u : g.getNodes()) {
       u.state = State.Unvisited;
     }
     start.state = State.Visiting;
     q.add(start);
     Node u;
-    while (!q.isEmpty())
-    {
+    while (!q.isEmpty()) {
       u = q.pop();
-      if (u != null)
-      {
-        for (final Node v: u.getAdjacent())
-        {
-          if (v.state == State.Unvisited)
-          {
-            if (v == end)
-            {
+      if (u != null) {
+        for (final Node v : u.getAdjacent()) {
+          if (v.state == State.Unvisited) {
+            if (v == end) {
               return true;
-            }
-            else
-            {
+            } else {
               v.state = State.Visiting;
               q.add(v);
             }
@@ -57,5 +46,4 @@ public class Question04_2
     }
     return false;
   }
-
 }

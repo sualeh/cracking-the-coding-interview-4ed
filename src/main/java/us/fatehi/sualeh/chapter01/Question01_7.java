@@ -1,12 +1,10 @@
 package us.fatehi.sualeh.chapter01;
 
-
 /**
- * 1.7 Write an algorithm such that if an element in an MxN matrix is 0,
- * its entire row and column is set to 0.
+ * 1.7 Write an algorithm such that if an element in an MxN matrix is 0, its entire row and column
+ * is set to 0.
  */
-public class Question01_7
-{
+public class Question01_7 {
 
   /*
    * At first glance, this problem seems easy: just iterate through the
@@ -25,17 +23,13 @@ public class Question01_7
    * pass of the matrix and set a cell to zero if its row or column is
    * zero.
    */
-  public static void setZeros(final int[][] matrix)
-  {
+  public static void setZeros(final int[][] matrix) {
     final boolean[] row = new boolean[matrix.length];
     final boolean[] column = new boolean[matrix[0].length];
     // Store the row and column index with value 0
-    for (int i = 0; i < matrix.length; i++)
-    {
-      for (int j = 0; j < matrix[0].length; j++)
-      {
-        if (matrix[i][j] == 0)
-        {
+    for (int i = 0; i < matrix.length; i++) {
+      for (int j = 0; j < matrix[0].length; j++) {
+        if (matrix[i][j] == 0) {
           row[i] = true;
           column[j] = true;
         }
@@ -43,16 +37,12 @@ public class Question01_7
     }
 
     // Set arr[i][j] to 0 if either row i or column j has a 0
-    for (int i = 0; i < matrix.length; i++)
-    {
-      for (int j = 0; j < matrix[0].length; j++)
-      {
-        if (row[i] || column[j])
-        {
+    for (int i = 0; i < matrix.length; i++) {
+      for (int j = 0; j < matrix[0].length; j++) {
+        if (row[i] || column[j]) {
           matrix[i][j] = 0;
         }
       }
     }
   }
-
 }

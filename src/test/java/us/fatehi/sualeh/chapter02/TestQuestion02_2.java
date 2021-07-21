@@ -1,20 +1,17 @@
 package us.fatehi.sualeh.chapter02;
 
-
-import static us.fatehi.sualeh.testutil.TestUtil.assertEquals;
 import static us.fatehi.sualeh.chapter02.Question02_2.nthToLast;
 import static us.fatehi.sualeh.testutil.LinkedListNodeUtil.linkedList;
+import static us.fatehi.sualeh.testutil.TestUtil.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
 import us.fatehi.sualeh.util.LinkedListNode;
 
-public class TestQuestion02_2
-{
+public class TestQuestion02_2 {
 
   @Test
-  public void test1Question02_2()
-  {
+  public void test1Question02_2() {
     final LinkedListNode linkedList1 = linkedList(1, 2, 3, 1, 4, 5, 1);
 
     final LinkedListNode nthToLast_2 = nthToLast(linkedList1, 2);
@@ -26,5 +23,4 @@ public class TestQuestion02_2
     final LinkedListNode nthToLast_100 = nthToLast(linkedList1, 100);
     assertEquals(null, nthToLast_100);
   }
-
 }

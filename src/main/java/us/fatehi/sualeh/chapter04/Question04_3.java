@@ -1,14 +1,12 @@
 package us.fatehi.sualeh.chapter04;
 
-
 import us.fatehi.sualeh.util.TreeNode;
 
 /**
- * 4.3 Given a sorted (increasing order) array, write an algorithm to
- * create a binary tree with minimal height.
+ * 4.3 Given a sorted (increasing order) array, write an algorithm to create a binary tree with
+ * minimal height.
  */
-public class Question04_3
-{
+public class Question04_3 {
 
   /*
    * We will try to create a binary tree such that for each node, the
@@ -19,17 +17,12 @@ public class Question04_3
    * subarray elements 4. Recurse
    */
 
-  public static TreeNode createMinimalBST(final int array[])
-  {
+  public static TreeNode createMinimalBST(final int array[]) {
     return addToTree(array, 0, array.length - 1);
   }
 
-  private static TreeNode addToTree(final int arr[],
-                                    final int start,
-                                    final int end)
-  {
-    if (end < start)
-    {
+  private static TreeNode addToTree(final int arr[], final int start, final int end) {
+    if (end < start) {
       return null;
     }
 
@@ -41,5 +34,4 @@ public class Question04_3
 
     return n;
   }
-
 }
