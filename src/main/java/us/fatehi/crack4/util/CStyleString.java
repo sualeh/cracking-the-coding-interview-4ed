@@ -2,7 +2,7 @@
  * This work is licensed under the Creative Commons Attribution-NonCommercial 3.0 Unported License.
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc/3.0/deed.en_US.
  *
- * <p>Copyright (c) 2013-2014 Sualeh Fatehi, sualeh@hotmail.com
+ * <p>Copyright (c) 2013-2021 Sualeh Fatehi, sualeh@hotmail.com
  */
 package us.fatehi.crack4.util;
 
@@ -23,29 +23,17 @@ public class CStyleString implements CharSequence, Serializable, Comparable<Char
   private final StringBuilder buffer;
 
   public CStyleString() {
-    this("");
+    buffer = new StringBuilder();
   }
 
   public CStyleString(final char[] str) {
-    if (str == null) {
-      throw new IllegalArgumentException("Cannot initialize with null string");
-    }
-
-    buffer = new StringBuilder(str.length);
-    for (final char ch : str) {
-      if (ch == 0) {
-        break;
-      }
-      buffer.append(ch);
-    }
+    this();
+    append(str);
   }
 
   public CStyleString(final CharSequence str) {
-    if (str == null) {
-      throw new IllegalArgumentException("Cannot initialize with null string");
-    }
-
-    buffer = new StringBuilder(str);
+    this();
+    strcat(str);
   }
 
   /** @see StringBuilder#charAt(int) */
@@ -126,9 +114,11 @@ public class CStyleString implements CharSequence, Serializable, Comparable<Char
   }
 
   public void strcat(final CharSequence str) {
-    if (str != null) {
-      buffer.append(str);
+    if (str == null) {
+      return;
     }
+    final char[] charArray = str.toString().toCharArray();
+    append(charArray);
   }
 
   public int strcmp(final CharSequence o) {
@@ -146,12 +136,24 @@ public class CStyleString implements CharSequence, Serializable, Comparable<Char
 
   /** @see String#toCharArray() */
   public char[] toCharArray() {
-    return Arrays.copyOf(buffer.toString().toCharArray(), length() + 1);
+    return buffer.toString().toCharArray();
   }
 
   /** {@inheritDoc} */
   @Override
   public String toString() {
     return buffer.toString();
+  }
+
+  private void append(final char[] charArray) {
+    if (charArray == null) {
+      return;
+    }
+    for (final char ch : charArray) {
+      if (ch == 0) {
+        break;
+      }
+      buffer.append(ch);
+    }
   }
 }
