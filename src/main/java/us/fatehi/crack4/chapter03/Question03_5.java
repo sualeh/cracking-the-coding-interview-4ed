@@ -12,8 +12,8 @@ public class Question03_5 {
    * second stack to reverse the order of the elements (by popping s1
    * and pushing the elements on to s2). In such an implementation, on
    * each peek() and pop() operation, we would pop everything from s1
-   * onto s2, perform the peek / pop operation, and then push everything
-   * back. This will work, but if two pop / peeks are performed
+   * onto s2, perform the peek/ pop operation, and then push everything
+   * back. This will work, but if two pop/ peeks are performed
    * back-to-back, we're needlessly moving elements. We can implement a
    * "lazy" approach where we let the elements sit in s2. s1 will thus
    * be ordered with the newest elements on the top, while s2 will have

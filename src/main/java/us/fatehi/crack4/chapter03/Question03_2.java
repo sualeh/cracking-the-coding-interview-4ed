@@ -41,7 +41,7 @@ public class Question03_2 {
     }
 
     public NodeWithMin pop() {
-      if (!(top == null)) {
+      if (top != null) {
         final NodeWithMin pop = top;
         top = top.next;
         return pop;

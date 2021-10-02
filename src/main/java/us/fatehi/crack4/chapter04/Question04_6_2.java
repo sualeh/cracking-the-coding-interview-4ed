@@ -4,10 +4,12 @@ import us.fatehi.crack4.util.TreeNode;
 
 /**
  * 4.6 Design an algorithm and write code to find the first common ancestor of two nodes in a binary
- * tree. Avoid storing additional nodes in a data structure. NOTE: This is not necessarily a binary
- * search tree.
+ * tree. Avoid storing additional nodes in a data structure.
+ *
+ * <p>NOTE: This is not necessarily a binary search tree.
  */
 public class Question04_6_2 {
+
   /*
    * Alternatively, you could follow a chain in which p and q are on the
    * same side. That is, if p and q are both on the left of the node,

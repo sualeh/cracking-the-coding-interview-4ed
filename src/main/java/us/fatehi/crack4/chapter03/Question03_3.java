@@ -26,6 +26,7 @@ public class Question03_3 {
      * stacks.
      */
     public int pop() {
+      // TODO: getLastStack() can return null - we need a null check
       final Stack last = getLastStack();
       final int v = last.pop();
       if (last.isEmpty()) {

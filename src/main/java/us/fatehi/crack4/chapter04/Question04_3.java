@@ -11,10 +11,13 @@ public class Question04_3 {
   /*
    * We will try to create a binary tree such that for each node, the
    * number of nodes in the left subtree and the right subtree are
-   * equal, if possible. Algorithm: 1. Insert into the tree the middle
-   * element of the array. 2. Insert (into the left subtree) the left
-   * subarray elements 3. Insert (into the right subtree) the right
-   * subarray elements 4. Recurse
+   * equal, if possible.
+   *
+   * Algorithm:
+   * 1. Insert into the tree the middle element of the array.
+   * 2. Insert (into the left subtree) the left subarray elements
+   * 3. Insert (into the right subtree) the right subarray elements
+   * 4. Recurse
    */
 
   public static TreeNode createMinimalBST(final int array[]) {

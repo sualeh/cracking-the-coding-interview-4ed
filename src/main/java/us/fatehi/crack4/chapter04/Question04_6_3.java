@@ -4,16 +4,20 @@ import us.fatehi.crack4.util.TreeNode;
 
 /**
  * 4.6 Design an algorithm and write code to find the first common ancestor of two nodes in a binary
- * tree. Avoid storing additional nodes in a data structure. NOTE: This is not necessarily a binary
- * search tree.
+ * tree. Avoid storing additional nodes in a data structure.
+ *
+ * <p>NOTE: This is not necessarily a binary search tree.
  */
 public class Question04_6_3 {
+
   /*
-   * For any node r, we know the following: - If p is on one side and q
-   * is on the other, r is the first common ancestor. - Else, the first
-   * common ancestor is on the left or the right side. So, we can create
-   * a simple recursive algorithm called search that calls search(left
-   * side) and search(right side) looking at how many nodes (p or q) are
+   * For any node r, we know the following:
+   * - If p is on one side and q is on the other, r is the first common ancestor.
+   * - Else, the first common ancestor is on the left or the right side.
+   *
+   * So, we can create a simple recursive algorithm called search
+   * that calls search(left side) and search(right side)
+   * looking at how many nodes (p or q) are
    * placed from the left side and from the right side of the current
    * node. If there are two nodes on one of the sides, then we have to
    * check if the child node on this side is p or q (because in this
