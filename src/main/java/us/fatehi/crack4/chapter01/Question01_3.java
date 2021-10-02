@@ -12,21 +12,23 @@ import us.fatehi.crack4.util.CStyleString;
  */
 public class Question01_3 {
 
-  // First, ask yourself, what does the interviewer mean by an
-  // additional buffer? Can we use an additional array of constant size?
-  // Algorithm—No (Large) Additional Memory:
-  // 1. For each character, check if it is a duplicate of already found
-  // characters.
-  // 2. Skip duplicate characters and update the non duplicate
-  // characters.
-  // Time complexity is O(N2).
+  /*
+   * First, ask yourself, what does the interviewer mean by an
+   * additional buffer? Can we use an additional array of constant size?
+   * Algorithm—No (Large) Additional Memory:
+   * 1. For each character, check if it is a duplicate of already found
+   * characters.
+   * 2. Skip duplicate characters and update the non duplicate
+   * characters.
+   * Time complexity is O(N2).
+   */
   public static void removeDuplicates(final CStyleString str) {
 
     if (str == null) {
       return;
     }
 
-    final int len = str.length();
+    final int len = str.strlen();
     if (len < 2) {
       return;
     }
@@ -36,19 +38,21 @@ public class Question01_3 {
     for (int i = 1; i < len; ++i) {
       int j;
       for (j = 0; j < tail; ++j) {
-        if (str.charAt(i) == str.charAt(j)) {
+        if (str.get(i) == str.get(j)) {
           break;
         }
       }
       if (j == tail) {
-        str.setCharAt(tail, str.charAt(i));
+        str.set(tail, str.get(i));
         ++tail;
       }
     }
-    str.setCharAt(tail, (char) 0);
+    str.set(tail, (char) 0);
   }
 
-  // With Additional Memory of Constant Size
+  /*
+   * With Additional Memory of Constant Size
+   */
   public static void removeDuplicatesEff(final CStyleString str) {
     if (str == null) {
       return;

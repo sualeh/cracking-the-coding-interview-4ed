@@ -11,7 +11,7 @@ public class Question03_2 {
    * of the minimum beneath itself. Then, to find the min, you just look
    * at what the top element thinks is the min. When you push an element
    * onto the stack, the element is given the current minimum. It sets
-   * its “local min” to be the min.
+   * its "local min" to be the min.
    */
   public static class StackWithMin {
 

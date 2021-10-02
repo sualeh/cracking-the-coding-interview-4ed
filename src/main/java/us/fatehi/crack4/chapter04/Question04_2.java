@@ -17,7 +17,7 @@ public class Question04_2 {
    * depth first search or breadth first search. We start with one of
    * the two nodes and, during traversal, check if the other node is
    * found. We should mark any node found in the course of the algorithm
-   * as ‘already visited’ to avoid cycles and repetition of the nodes.
+   * as 'already visited' to avoid cycles and repetition of the nodes.
    */
 
   public static boolean search(final Graph g, final Node start, final Node end) {

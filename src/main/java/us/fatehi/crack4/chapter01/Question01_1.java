@@ -11,7 +11,7 @@ public class Question01_1 {
 
   /**
    * We can reduce our space usage a little bit by using a bit vector. We will assume, in the below
-   * code, that the string is only lower case ‘a’ through ‘z’. This will allow us to use just a
+   * code, that the string is only lower case 'a' through 'z'. This will allow us to use just a
    * single int
    */
   public static boolean isUniqueChars(final String str) {
@@ -58,6 +58,7 @@ public class Question01_1 {
     return true;
   }
 
+  // TODO: Attempt to replace integer set with BitSet
   public static boolean isUniqueCharsUnicode(final String str) {
 
     // Basic error checking

@@ -72,7 +72,7 @@ public class Question04_6_3 {
     }
   }
 
-  // Checks how many “special” nodes are located under this root
+  // Checks how many "special" nodes are located under this root
   private static int covers(final TreeNode root, final TreeNode p, final TreeNode q) {
     int ret = NO_NODES_FOUND;
     if (root == null) {

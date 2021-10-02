@@ -56,15 +56,15 @@ public class Question03_4 {
   }
 
   /*
-   * We need to move N disks from Rod 1 to Rod 3, but let’s start from
+   * We need to move N disks from Rod 1 to Rod 3, but let's start from
    * the beginning. Moving the top disk is easy - we just move it to
    * Disk 3. Can we move the top two disks? Yes: 1. Move Disk 1 from Rod
    * 1 to Rod 2 2. Move Disk 2 from Rod 1 to Rod 3 3. Move Disk 1 from
    * Rod 2 to Rod 3 Can we move the top three disks? 1. We know we can
    * move the top two disks around from one Rod to another (as shown
-   * earlier), so let’s assume we have moved Disk 1 and 2 to Rod 2. 2.
+   * earlier), so let's assume we have moved Disk 1 and 2 to Rod 2. 2.
    * Move Disk 3 to Rod 3 3. Again we know we can move the top two disks
-   * around, so let’s move them from Rod 2 to Rod 3. This approach leads
+   * around, so let's move them from Rod 2 to Rod 3. This approach leads
    * to a natural recursive algorithm:
    */
   public static void main(final String[] args) {

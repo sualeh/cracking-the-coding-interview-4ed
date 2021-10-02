@@ -27,8 +27,8 @@ public class Question02_1 {
     }
   }
 
-  // Without a buffer, we can iterate with two pointers: “current” does
-  // a normal iteration, while “runner” iterates through all prior nodes
+  // Without a buffer, we can iterate with two pointers: "current" does
+  // a normal iteration, while "runner" iterates through all prior nodes
   // to check for dupes. Runner will only see one dupe per node, because
   // if there were multiple duplicates they would have been removed
   // already.

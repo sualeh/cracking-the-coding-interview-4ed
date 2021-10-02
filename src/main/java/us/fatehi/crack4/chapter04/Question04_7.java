@@ -13,7 +13,7 @@ public class Question04_7 {
    * once and is called no more than once per node of the large tree.
    * Worst case runtime is at most O(n * m), where n and m are the sizes
    * of trees T1 and T2, respectively. If k is the number of occurrences
-   * of T2’s root in T1, the worst case runtime can be characterized as
+   * of T2's root in T1, the worst case runtime can be characterized as
    * O(n + k * m).
    */
 
@@ -33,7 +33,7 @@ public class Question04_7 {
     }
 
     // big tree empty & subtree still not found
-    // data doesn’t match
+    // data doesn't match
     if (r1 == null || r2 == null || (r1.value() != r2.value())) {
       return false;
     }

@@ -11,7 +11,7 @@ public class Question01_6 {
    * layer. In the first for loop, we rotate the first layer (outermost edges). We rotate the edges
    * by doing a four-way swap first on the corners, then on the element clockwise from the edges,
    * then on the element three steps away. Once the exterior elements are rotated, we then rotate
-   * the interior region’s edges.
+   * the interior region's edges.
    */
   public static void rotate(final int[][] matrix, final int n) {
     for (int layer = 0; layer < n / 2; ++layer) {

@@ -4,7 +4,7 @@ import us.fatehi.crack4.util.LinkedListNode;
 
 /**
  * 2.5 Given a circular linked list, implement an algorithm which returns node at the beginning of
- * the loop. DEFINITION Circular linked list: A (corrupt) linked list in which a node’s next pointer
+ * the loop. DEFINITION Circular linked list: A (corrupt) linked list in which a node's next pointer
  * points to an earlier node, so as to make a loop in the linked list. EXAMPLE Input: A -> B -> C ->
  * D -> E -> C [the same C as earlier] Output: C
  */
@@ -18,7 +18,7 @@ public class Question02_5 {
    * loop. Imagine, as an analogy, two people racing around a track, one
    * running twice as fast as the other. If they start off at the same
    * place, when will they next meet? They will next meet at the start
-   * of the next lap. Now, let’s suppose Fast Runner had a head start of
+   * of the next lap. Now, let's suppose Fast Runner had a head start of
    * k meters on an n step lap. When will they next meet? They will meet
    * k meters before the start of the next lap. (Why? Fast Runner would
    * have made k + 2(n - k) steps, including its head start, and Slow

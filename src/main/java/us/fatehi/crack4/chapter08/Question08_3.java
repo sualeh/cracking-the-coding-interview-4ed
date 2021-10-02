@@ -9,7 +9,7 @@ public class Question08_3 {
    * We should first have some reasonable expectations of our time and
    * space complexity. How many subsets of a set are there? We can
    * compute this by realizing that when we generate a subset, each
-   * element has the “choice” of either being in there or not. That is,
+   * element has the "choice" of either being in there or not. That is,
    * for the first element, there are 2 choices. For the second, there
    * are two, etc. So, doing 2 * 2 * ... * 2 n times gives us 2^n
    * subsets. We will not be able to do better than this in time or
@@ -44,11 +44,11 @@ public class Question08_3 {
   }
 
   /**
-   * Approach #2: Combinatorics »»When we’re generating a set, we have two choices for each element:
-   * (1) the element is in the set (the “yes” state) or (2) the element is not in the set (the “no”
-   * state). This means that each subset is a sequence of yesses / nos—e.g., “yes, yes, no, no, yes,
-   * no” »»This gives us 2^n possible subsets. How can we iterate through all possible sequences of
-   * “yes” / “no” states for all elements? If each “yes” can be treated as a 1 and each “no” can be
+   * Approach #2: Combinatorics »»When we're generating a set, we have two choices for each element:
+   * (1) the element is in the set (the "yes" state) or (2) the element is not in the set (the "no"
+   * state). This means that each subset is a sequence of yesses / nos—e.g., "yes, yes, no, no, yes,
+   * no" »»This gives us 2^n possible subsets. How can we iterate through all possible sequences of
+   * "yes" / "no" states for all elements? If each "yes" can be treated as a 1 and each "no" can be
    * treated as a 0, then each subset can be represented as a binary string. »»Generating all
    * subsets then really just comes down to generating all binary numbers (that is, all integers).
    * Easy!
